@@ -5,35 +5,60 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/huxblog-boilerplate/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员">
+    <meta name="keywords" content="黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计">
+    <meta name="theme-color" content="#000000">
 
-    <title>「SF-LC」7 Ind Prop - 你的博客 | Your Blog</title>
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="「SF-LC」7 Ind Prop - 黄玄的博客 | Hux Blog">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="Inductively Defined Propositions
+">
+    
+    <meta property="article:published_time" content=" 2019-01-07T00:00:00Z">
+    
+    
+    <meta property="article:author" content="Hux">
+    
+    
+    <meta property="article:tag" content="LF (逻辑基础)">
+    
+    <meta property="article:tag" content="SF (软件基础)">
+    
+    <meta property="article:tag" content="Coq">
+    
+    <meta property="article:tag" content="笔记">
+    
+    
+    <meta property="og:image" content="http://localhost:4000https://github.com/Huxpro.png">
+    <meta property="og:url" content="http://localhost:4000/2019/01/07/sf-lf-07-indprop/">
+    <meta property="og:site_name" content="黄玄的博客 | Hux Blog">
 
-    <link rel="canonical" href="http://localhost:4000/huxblog-boilerplate/2019/01/07/sf-lf-07-indprop/">
+    <title>「SF-LC」7 Ind Prop - 黄玄的博客 | Hux Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2019/01/07/sf-lf-07-indprop/">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/huxblog-boilerplate/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" /css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/huxblog-boilerplate/css/hux-blog.min.css">
-
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/huxblog-boilerplate/css/syntax.css">
+    <link rel="stylesheet" href=" /css/hux-blog.min.css">
 
     <!-- Custom Fonts -->
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -45,6 +70,10 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-6487568398225121" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 
@@ -52,116 +81,184 @@
 <body ontouchstart="">
 
     <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/huxblog-boilerplate/">Your Blog</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/huxblog-boilerplate/">Home</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/about/">About</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/archive/">Archive</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/offline.html">Offline</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/tags/">Tags</a>
-                    </li>
-                    
-                </ul>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+    
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Hux Blog</a>
             </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+        <!-- /.container -->
+    </nav>
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        var __HuxNav__ = {
+            close: function () {
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function () {
+                    // prevent frequently toggle
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            },
+            open: function () {
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
         }
-    }
-</script>
 
+        // Bind Event
+        $toggle.addEventListener('click', function (e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                __HuxNav__.close()
+            } else {
+                __HuxNav__.open()
+            }
+        })
+
+        /**
+         * Since Fastclick is used to delegate 'touchstart' globally
+         * to hack 300ms delay in iOS by performing a fake 'click',
+         * Using 'e.stopPropagation' to stop 'touchstart' event from 
+         * $toggle/$collapse will break global delegation.
+         * 
+         * Instead, we use a 'e.target' filter to prevent handler
+         * added to document close HuxNav.  
+         *
+         * Also, we use 'click' instead of 'touchstart' as compromise
+         */
+        document.addEventListener('click', function (e) {
+            if (e.target == $toggle) return;
+            if (e.target.className == 'icon-bar') return;
+            __HuxNav__.close();
+        })
+    </script>
+    <!-- Search -->
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/huxblog-boilerplate/img/home-bg.jpg" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
 
 <!-- Post Header -->
+
+
+
 <style type="text/css">
-    header.intro-header {
-        background-image: url('/huxblog-boilerplate/img/home-bg.jpg')
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/home-bg.jpg');
+        background: ;
     }
+
+    
 </style>
-<header class="intro-header">
+
+
+
+
+<header class="intro-header style-text" >
+
+    <div class="header-mask"></div>
+    
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#LF (逻辑基础)" title="LF (逻辑基础)">LF (逻辑基础)</a>
+                        <a class="tag" href="/archive/?tag=LF+%28%E9%80%BB%E8%BE%91%E5%9F%BA%E7%A1%80%29" title="LF (逻辑基础)">LF (逻辑基础)</a>
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#SF (软件基础)" title="SF (软件基础)">SF (软件基础)</a>
+                        <a class="tag" href="/archive/?tag=SF+%28%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%29" title="SF (软件基础)">SF (软件基础)</a>
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#Coq" title="Coq">Coq</a>
+                        <a class="tag" href="/archive/?tag=Coq" title="Coq">Coq</a>
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#笔记" title="笔记">笔记</a>
+                        <a class="tag" href="/archive/?tag=%E7%AC%94%E8%AE%B0" title="笔记">笔记</a>
                         
                     </div>
                     <h1>「SF-LC」7 Ind Prop</h1>
                     
-                    
                     <h2 class="subheading">Logical Foundations - Inductively Defined Propositions (归纳定义命题)</h2>
-                    
                     <span class="meta">Posted by Hux on January 7, 2019</span>
                 </div>
             </div>
@@ -169,27 +266,39 @@
     </div>
 </header>
 
+
+
+
+
+
+
 <!-- Post Content -->
 <article>
     <div class="container">
         <div class="row">
 
-            <!-- Post Container -->
+    <!-- Post Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="inductively-defined-propositions">Inductively Defined Propositions</h2>
+                <!-- Multi-Lingual -->
+                
+
+				<h2 id="inductively-defined-propositions">Inductively Defined Propositions</h2>
 
 <h3 id="the-3rd-way-to-state-evenness">The 3rd way to state Evenness…</h3>
 
 <p>Besides:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">even_bool_prop</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">n</span><span class="p">,</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">even_bool_prop</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">n</span><span class="p">,</span><span class="w">
   </span><span class="no">evenb</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span><span class="w"> </span><span class="o">↔</span><span class="w"> </span><span class="o">∃</span><span class="no">k</span><span class="p">,</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">double</span><span class="w"> </span><span class="no">k</span><span class="pi">.</span><span class="w">
  </span><span class="c">(*bool*)</span><span class="w">                 </span><span class="c">(*prop*)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>we can write an <em>Inductive definition</em> of the <code class="language-plaintext highlighter-rouge">even</code> property!</p>
 
@@ -197,32 +306,47 @@
 
 <p>In CS, we often uses <em>inference rules</em></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                    ev n
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>                    ev n
 ---- ev_0       ------------ ev_SS
 ev 0            ev (S (S n))
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>and <em>proof tree</em> (i.e. evidence), there could be multiple premieses to make it more tree-ish.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---- ev_0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>---- ev_0
 ev 0
 ---- ev_SS
 ev 2
 ---- ev_SS
 ev 4
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>So we can literally translate them into a GADT:</p>
 
 <h3 id="inductive-definition-of-evenness">Inductive Definition of Evenness</h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">ev_0</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="mi">0</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">ev_SS</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">n</span><span class="p">,</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="p">(</span><span class="no">S</span><span class="w"> </span><span class="p">(</span><span class="no">S</span><span class="w"> </span><span class="no">n</span><span class="p">))</span><span class="pi">.</span><span class="w"> 
 
 </span><span class="k">Check</span><span class="w"> </span><span class="no">even_SS</span><span class="pi">.</span><span class="w">
 </span><span class="c">(* ==&gt; : forall n : nat, even n -&gt; even (S (S n)) *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>There are two ways to understand the <code class="language-plaintext highlighter-rouge">even</code> here:</p>
 
@@ -250,12 +374,17 @@ ev 4
 
 <p>Considered a “parametrized” ADT such as the polymorphic list,</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="p">(</span><span class="no">X</span><span class="p">:</span><span class="kr">Type</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="p">(</span><span class="no">X</span><span class="p">:</span><span class="kr">Type</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">nil</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">cons</span><span class="w"> </span><span class="p">(</span><span class="no">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">X</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">l</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">X</span><span class="p">)</span><span class="pi">.</span><span class="w">
 
 </span><span class="k">Check</span><span class="w"> </span><span class="no">list</span><span class="pi">.</span><span class="w"> </span><span class="c">(* ===&gt; list : Type -&gt; Type *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>where we defined type con <code class="language-plaintext highlighter-rouge">list : Type -&gt; Type</code>, by having a type var <code class="language-plaintext highlighter-rouge">X</code> in the left of the <code class="language-plaintext highlighter-rouge">:</code>.
 the <code class="language-plaintext highlighter-rouge">X</code> is called a <em>parameter</em> and would be <em>parametrized i.e. substituted, globally</em>, in constructors.</p>
@@ -266,10 +395,13 @@ it’s called an <em>index</em> and will form a family of type indexed by <code 
 
 <p>From this perspective, there is an alternative way to write this GADT:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">ev_0</span><span class="w">                         </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">ev_SS</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">H</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="no">n</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="p">(</span><span class="no">S</span><span class="w"> </span><span class="p">(</span><span class="no">S</span><span class="w"> </span><span class="no">n</span><span class="p">))</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>we have two ways to construct the <code class="language-plaintext highlighter-rouge">even</code> type (<code class="language-plaintext highlighter-rouge">Prop &lt;: Type</code>), either or:</p>
 <ol>
@@ -295,28 +427,39 @@ every parametrized one can be represented as indexed one (it’s just that index
   <p>Such “constructor theorems” have the same status as proven theorems. In particular, we can use Coq’s <code class="language-plaintext highlighter-rouge">apply</code> tactic with the rule names to prove <code class="language-plaintext highlighter-rouge">even</code> for particular numbers…</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">ev_4</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="mi">4</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">ev_4</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="mi">4</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w"> </span><span class="kp">apply</span><span class="w"> </span><span class="no">ev_SS</span><span class="pi">.</span><span class="w"> </span><span class="kp">apply</span><span class="w"> </span><span class="no">ev_SS</span><span class="pi">.</span><span class="w"> </span><span class="kp">apply</span><span class="w"> </span><span class="no">ev_0</span><span class="pi">.</span><span class="w"> </span><span class="k">Qed</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Proof States Transition:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>even 4
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>even 4
 ------ apply ev_SS.
 even 2
 ------ apply ev_SS.
 even 0
 ------ apply ev_0.
        Qed.
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>I believed what <code class="language-plaintext highlighter-rouge">apply</code> do is trying to <em>backward reasoning</em>, i.e. matching the goal and leave the “evidence” need to be proved (to conclude the goal).</p>
 
 <p>we can write it as normal function application syntax w/o using tactics like other Dependent-typed PL as well</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">ev_4'</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="mi">4</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">ev_4'</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="mi">4</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w"> </span><span class="kp">apply</span><span class="w"> </span><span class="p">(</span><span class="no">ev_SS</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="no">ev_SS</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="no">ev_0</span><span class="p">))</span><span class="pi">.</span><span class="w"> </span><span class="k">Qed</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="using-evidence-in-proofs">Using Evidence in Proofs</h2>
 
@@ -343,7 +486,16 @@ This is called the <strong>Inversion property</strong>.</p>
 
 <p>We can prove the inersion property by ourselves:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">ev_inversion</span><span class="w"> </span><span class="p">:</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">ev_inversion</span><span class="w"> </span><span class="p">:</span><span class="w">
   </span><span class="o">∀</span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">),</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">→</span><span class="w">
     </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">∨</span><span class="w"> </span><span class="p">(</span><span class="o">∃</span><span class="no">n'</span><span class="p">,</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">S</span><span class="w"> </span><span class="p">(</span><span class="no">S</span><span class="w"> </span><span class="no">n'</span><span class="p">)</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="no">even</span><span class="w"> </span><span class="no">n'</span><span class="p">)</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
@@ -352,7 +504,7 @@ This is called the <strong>Inversion property</strong>.</p>
   </span><span class="p">-</span><span class="w"> </span><span class="c">(* E = ev_0 : even 0 *)</span><span class="w">                  </span><span class="no">left</span><span class="pi">.</span><span class="w"> </span><span class="ne">reflexivity</span><span class="pi">.</span><span class="w">
   </span><span class="p">-</span><span class="w"> </span><span class="c">(* E = ev_SS n', E' : even (S (S n')) *)</span><span class="w"> </span><span class="no">right</span><span class="pi">.</span><span class="w"> </span><span class="err">∃</span><span class="no">n'</span><span class="pi">.</span><span class="w"> </span><span class="kp">split</span><span class="pi">.</span><span class="w"> </span><span class="ne">reflexivity</span><span class="pi">.</span><span class="w"> </span><span class="kp">apply</span><span class="w"> </span><span class="no">E'</span><span class="pi">.</span><span class="w">
 </span><span class="k">Qed</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>But Coq provide the <code class="language-plaintext highlighter-rouge">inversion</code> tactics that does more! (not always good tho, too automagical)</p>
 
@@ -422,12 +574,17 @@ then every nonempty subset must have a minimal element. (This is the definition 
 <p>Just as a single-argument proposition defines a <em>property</em>, 性质
 a two-argument proposition defines a <em>relation</em>. 关系</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">le</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">le</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">le_n</span><span class="w"> </span><span class="no">n</span><span class="w">                </span><span class="p">:</span><span class="w"> </span><span class="no">le</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">n</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">le_S</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">m</span><span class="w"> </span><span class="p">(</span><span class="no">H</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">le</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">m</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">le</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="p">(</span><span class="no">S</span><span class="w"> </span><span class="no">m</span><span class="p">)</span><span class="pi">.</span><span class="w">
 
 </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"n ≤ m"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">le</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">m</span><span class="p">)</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <blockquote>
   <p>It says that there are two ways to <em>give evidence</em> that one number is less than or equal to another:</p>
@@ -464,8 +621,9 @@ rewriting <code class="language-plaintext highlighter-rouge">n=1</code> on <code
 <p>For any inductively defined proposition (<code class="language-plaintext highlighter-rouge">&lt;: Type</code>) in hypothesis:
 meaning from type perspective, it’s already a “proper type” (<code class="language-plaintext highlighter-rouge">::*</code>)</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">C1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">P1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="no">C2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">A2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="no">P2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">..</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">C1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">P1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="no">C2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">A2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="no">P2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">..</span><span class="pi">.</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li><code class="language-plaintext highlighter-rouge">destruct</code>     case analysis on inductive type</li>
@@ -502,14 +660,21 @@ meaning from type perspective, it’s already a “proper type” (<code class="
 
 <p><em>Definition of RegExp in formal language can be found in FCT/CC materials</em></p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">reg_exp</span><span class="w"> </span><span class="p">{</span><span class="no">T</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="p">}</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">reg_exp</span><span class="w"> </span><span class="p">{</span><span class="no">T</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="p">}</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">EmptySet</span><span class="w">                 </span><span class="c">(* ∅ *)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">EmptyStr</span><span class="w">                 </span><span class="c">(* ε *)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">Char</span><span class="w"> </span><span class="p">(</span><span class="no">t</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">T</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">App</span><span class="w"> </span><span class="p">(</span><span class="no">r1</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">reg_exp</span><span class="p">)</span><span class="w">    </span><span class="c">(* r1r2 *)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">Union</span><span class="w"> </span><span class="p">(</span><span class="no">r1</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">reg_exp</span><span class="p">)</span><span class="w">  </span><span class="c">(* r1 | r2 *)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">Star</span><span class="w"> </span><span class="p">(</span><span class="no">r</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">reg_exp</span><span class="p">)</span><span class="pi">.</span><span class="w">      </span><span class="c">(* r*  *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <blockquote>
   <p>Note that this definition is <em>polymorphic</em>. 
@@ -533,7 +698,17 @@ We depart slightly in that <em>we do not require the type <code class="language-
 somewhat type-level computing !</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">exp_match</span><span class="w"> </span><span class="p">{</span><span class="no">T</span><span class="p">}</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">T</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">reg_exp</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">exp_match</span><span class="w"> </span><span class="p">{</span><span class="no">T</span><span class="p">}</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">T</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">reg_exp</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">MEmpty</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">exp_match</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="no">EmptyStr</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">MChar</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">exp_match</span><span class="w"> </span><span class="p">[</span><span class="no">x</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="no">Char</span><span class="w"> </span><span class="no">x</span><span class="p">)</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">MApp</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="no">s2</span><span class="w"> </span><span class="no">re2</span><span class="w">
@@ -543,7 +718,7 @@ somewhat type-level computing !</p>
 </span><span class="c">(** etc. **)</span><span class="w">
 
 </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"s =~ re"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">exp_match</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="no">re</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="pi">.</span><span class="w">  </span><span class="c">(* the Perl notation! *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="slide-qa---3">Slide Q&amp;A - 3</h2>
 
@@ -555,7 +730,18 @@ somewhat type-level computing !</p>
   <p>the informal rules for <code class="language-plaintext highlighter-rouge">Union</code> and <code class="language-plaintext highlighter-rouge">Star</code> correspond to <em>two constructors</em> each.</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">|</span><span class="w"> </span><span class="no">MUnionL</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="no">re2</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="err">|</span><span class="w"> </span><span class="no">MUnionL</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="no">re2</span><span class="w">
               </span><span class="p">(</span><span class="no">H1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">exp_match</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="no">re1</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w">
               </span><span class="no">exp_match</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="p">(</span><span class="no">Union</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="no">re2</span><span class="p">)</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">MUnionR</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="no">s2</span><span class="w"> </span><span class="no">re2</span><span class="w">
@@ -566,7 +752,7 @@ somewhat type-level computing !</p>
               </span><span class="p">(</span><span class="no">H1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">exp_match</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="no">re</span><span class="p">)</span><span class="w">
               </span><span class="p">(</span><span class="no">H2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">exp_match</span><span class="w"> </span><span class="no">s2</span><span class="w"> </span><span class="p">(</span><span class="no">Star</span><span class="w"> </span><span class="no">re</span><span class="p">))</span><span class="w"> </span><span class="p">:</span><span class="w">
               </span><span class="no">exp_match</span><span class="w"> </span><span class="p">(</span><span class="no">s1</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="no">s2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">Star</span><span class="w"> </span><span class="no">re</span><span class="p">)</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Thinking about their <em>NFA</em>: they both have non-deterministic branches!
 The recursive occurrences of <code class="language-plaintext highlighter-rouge">exp_match</code> gives as <em>direct argument</em> (evidence) about which branches we goes.</p>
@@ -581,11 +767,15 @@ that’s why there is even Quick Check for Coq.</p>
 <p>In fact, <code class="language-plaintext highlighter-rouge">MApp</code> is also non-deterministic about how does <code class="language-plaintext highlighter-rouge">re1</code> and <code class="language-plaintext highlighter-rouge">re2</code> collaborate…
 So we have to be explicit:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Example</span><span class="w"> </span><span class="no">reg_exp_ex2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">App</span><span class="w"> </span><span class="p">(</span><span class="no">Char</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">Char</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">Example</span><span class="w"> </span><span class="no">reg_exp_ex2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">App</span><span class="w"> </span><span class="p">(</span><span class="no">Char</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">Char</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
   </span><span class="kp">apply</span><span class="w"> </span><span class="p">(</span><span class="no">MApp</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">_</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="pi">.</span><span class="w">
   </span><span class="err">...</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="inversion-on-evidence-1">Inversion on Evidence</h3>
 
@@ -593,15 +783,38 @@ So we have to be explicit:</p>
 we have to write our own <em>inversion lemma</em> (like <code class="language-plaintext highlighter-rouge">ev_inversion</code> for <code class="language-plaintext highlighter-rouge">even</code>).
 Otherwise we have no equation (which we should have) to say <code class="language-plaintext highlighter-rouge">contradiction</code>.</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Example</span><span class="w"> </span><span class="no">reg_exp_ex3</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="p">([</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">Char</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">Example</span><span class="w"> </span><span class="no">reg_exp_ex3</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="p">([</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">Char</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
   </span><span class="kp">intros</span><span class="w"> </span><span class="no">H</span><span class="pi">.</span><span class="w"> </span><span class="kp">inversion</span><span class="w"> </span><span class="no">H</span><span class="pi">.</span><span class="w">
 </span><span class="k">Qed</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="manual-manipulation">Manual Manipulation</h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Lemma</span><span class="w"> </span><span class="no">MStar1</span><span class="w"> </span><span class="p">:</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="k">Lemma</span><span class="w"> </span><span class="no">MStar1</span><span class="w"> </span><span class="p">:</span><span class="w">
   </span><span class="kr">forall</span><span class="w"> </span><span class="no">T</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="p">(</span><span class="no">re</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">@</span><span class="no">reg_exp</span><span class="w"> </span><span class="no">T</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w">
     </span><span class="no">s</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
     </span><span class="no">s</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">Star</span><span class="w"> </span><span class="no">re</span><span class="pi">.</span><span class="w">
@@ -620,7 +833,7 @@ Otherwise we have no equation (which we should have) to say <code class="languag
   </span><span class="p">-</span><span class="w"> </span><span class="kp">apply</span><span class="w"> </span><span class="no">MStar0</span><span class="pi">.</span><span class="w">              </span><span class="c">(* evidence H2 *)</span><span class="w">
 </span><span class="k">Qed</span><span class="pi">.</span><span class="w">                           </span><span class="c">(* the fun fact is that we can really think the _proof_
                                   as providing evidence by _partial application_. *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="induction-on-evidence-1">Induction on Evidence</h3>
 
@@ -628,7 +841,17 @@ Otherwise we have no equation (which we should have) to say <code class="languag
   <p>By the recursive nature of <code class="language-plaintext highlighter-rouge">exp_match</code>, proofs will often require induction.</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">(** Recursively collecting all characters that occur in a regex **)</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="c">(** Recursively collecting all characters that occur in a regex **)</span><span class="w">
 </span><span class="k">Fixpoint</span><span class="w"> </span><span class="no">re_chars</span><span class="w"> </span><span class="p">{</span><span class="no">T</span><span class="p">}</span><span class="w"> </span><span class="p">(</span><span class="no">re</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">reg_exp</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">T</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="kr">match</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="kp">with</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">EmptySet</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="p">[]</span><span class="w">
@@ -638,15 +861,18 @@ Otherwise we have no equation (which we should have) to say <code class="languag
   </span><span class="p">|</span><span class="w"> </span><span class="no">Union</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="no">re2</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="no">re_chars</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="no">re_chars</span><span class="w"> </span><span class="no">re2</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">Star</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="no">re_chars</span><span class="w"> </span><span class="no">re</span><span class="w">
   </span><span class="kr">end</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>The proof of <code class="language-plaintext highlighter-rouge">in_re_match</code> went through by <code class="language-plaintext highlighter-rouge">inversion</code> on relation <code class="language-plaintext highlighter-rouge">s =~ re</code>. (which gives us all 7 cases.)
 The interesting case is <code class="language-plaintext highlighter-rouge">MStarApp</code>, where the proof tree has two <em>branches</em> (of premises):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                  s1 =~ re    s2 =~ Star re
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>                  s1 =~ re    s2 =~ Star re
                  ---------------------------            (MStarApp)
                     s1 ++ s2 =~ Star re
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>So by induction on the relation (rule), we got <em>two induction hypotheses</em>!
 That’s what we need for the proof.</p>
@@ -655,13 +881,19 @@ That’s what we need for the proof.</p>
 
 <p>One interesting/confusing features is that <code class="language-plaintext highlighter-rouge">induction</code> over a term that’s <em>insuffciently general</em>. e.g.</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Lemma</span><span class="w"> </span><span class="no">star_app</span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">T</span><span class="w"> </span><span class="p">(</span><span class="no">s1</span><span class="w"> </span><span class="no">s2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">T</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">re</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">@</span><span class="no">reg_exp</span><span class="w"> </span><span class="no">T</span><span class="p">),</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">Lemma</span><span class="w"> </span><span class="no">star_app</span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">T</span><span class="w"> </span><span class="p">(</span><span class="no">s1</span><span class="w"> </span><span class="no">s2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">T</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">re</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">@</span><span class="no">reg_exp</span><span class="w"> </span><span class="no">T</span><span class="p">),</span><span class="w">
   </span><span class="no">s1</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">Star</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="o">→</span><span class="w">
   </span><span class="no">s2</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">Star</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="o">→</span><span class="w">
   </span><span class="no">s1</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="no">s2</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">Star</span><span class="w"> </span><span class="no">re</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
   </span><span class="kp">intros</span><span class="w"> </span><span class="no">T</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="no">s2</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="no">H1</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Here, we know the fact that both <code class="language-plaintext highlighter-rouge">s1</code> and <code class="language-plaintext highlighter-rouge">s2</code> are matching with the form <code class="language-plaintext highlighter-rouge">Star re</code>. 
 But by <code class="language-plaintext highlighter-rouge">induction</code>. it will give us <em>all 7 cases</em> to prove, but <em>5 of them are contradictory</em>!</p>
@@ -689,21 +921,28 @@ which is best suitted for have a specific conclusion of some rule and inverts ba
   <p>we often need to relate boolean computations to statements in <code class="language-plaintext highlighter-rouge">Prop</code></p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">reflect</span><span class="w"> </span><span class="p">(</span><span class="no">P</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Prop</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bool</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">reflect</span><span class="w"> </span><span class="p">(</span><span class="no">P</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Prop</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bool</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">ReflectT</span><span class="w"> </span><span class="p">(</span><span class="no">H</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">P</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">reflect</span><span class="w"> </span><span class="no">P</span><span class="w"> </span><span class="no">true</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">ReflectF</span><span class="w"> </span><span class="p">(</span><span class="no">H</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">¬</span><span class="no">P</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">reflect</span><span class="w"> </span><span class="no">P</span><span class="w"> </span><span class="no">false</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>The <em>only</em> way to construct <code class="language-plaintext highlighter-rouge">ReflectT/F</code> is by showing (a proof) of <code class="language-plaintext highlighter-rouge">P/¬P</code>,
 meaning invertion on <code class="language-plaintext highlighter-rouge">reflect P bool</code> can give us back the evidence.</p>
 
 <p><code class="language-plaintext highlighter-rouge">iff_reflect</code> give us <code class="language-plaintext highlighter-rouge">eqbP</code>.</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Lemma</span><span class="w"> </span><span class="no">eqbP</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">n</span><span class="w"> </span><span class="no">m</span><span class="p">,</span><span class="w"> </span><span class="no">reflect</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">m</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="p">?</span><span class="w"> </span><span class="no">m</span><span class="p">)</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">Lemma</span><span class="w"> </span><span class="no">eqbP</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">n</span><span class="w"> </span><span class="no">m</span><span class="p">,</span><span class="w"> </span><span class="no">reflect</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">m</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="o">=</span><span class="p">?</span><span class="w"> </span><span class="no">m</span><span class="p">)</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
   </span><span class="kp">intros</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">m</span><span class="pi">.</span><span class="w"> </span><span class="kp">apply</span><span class="w"> </span><span class="no">iff_reflect</span><span class="pi">.</span><span class="w"> </span><span class="kp">rewrite</span><span class="w"> </span><span class="no">eqb_eq</span><span class="pi">.</span><span class="w"> </span><span class="ne">reflexivity</span><span class="pi">.</span><span class="w">
 </span><span class="k">Qed</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>This gives us a small gain in convenience: we immediately give the <code class="language-plaintext highlighter-rouge">Prop</code> from <code class="language-plaintext highlighter-rouge">bool</code>, no need to <code class="language-plaintext highlighter-rouge">rewrite</code>.</p>
 <blockquote>
@@ -739,9 +978,11 @@ technically, it only halts on finite strings but not infinite strings.
 Here we took a <em>derivative</em> approach which operates purely on string.</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Require</span><span class="w"> </span><span class="k">Export</span><span class="w"> </span><span class="nn">Coq</span><span class="p">.</span><span class="nn">Strings</span><span class="p">.</span><span class="no">Ascii</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Require</span><span class="w"> </span><span class="k">Export</span><span class="w"> </span><span class="nn">Coq</span><span class="p">.</span><span class="nn">Strings</span><span class="p">.</span><span class="no">Ascii</span><span class="pi">.</span><span class="w">
 </span><span class="k">Definition</span><span class="w"> </span><span class="no">string</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">ascii</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Coq 标准库中的 ASCII 字符串也是归纳定义的，不过我们这里为了之前定义的 match relation 用 <code class="language-plaintext highlighter-rouge">list ascii</code>.</p>
 
@@ -760,9 +1001,11 @@ we need to be able to <em>test equality</em> for each <code class="language-plai
 
 <h5 id="1-等价-helper">1. 等价 helper</h5>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Lemma</span><span class="w"> </span><span class="no">app_exists</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="p">(</span><span class="no">s</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">string</span><span class="p">)</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="no">re1</span><span class="p">,</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Lemma</span><span class="w"> </span><span class="no">app_exists</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="p">(</span><span class="no">s</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">string</span><span class="p">)</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="no">re1</span><span class="p">,</span><span class="w">
     </span><span class="no">s</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">App</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="no">re1</span><span class="w"> </span><span class="o">↔</span><span class="w"> </span><span class="o">∃</span><span class="no">s0</span><span class="w"> </span><span class="no">s1</span><span class="p">,</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">s0</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="no">s0</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re1</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>this <em>helper rules</em> is written for the sake of convenience:</p>
 <ul>
@@ -772,11 +1015,15 @@ we need to be able to <em>test equality</em> for each <code class="language-plai
 
 <h5 id="2-app-对于-a--s-的匹配性质">2. <code class="language-plaintext highlighter-rouge">App</code> 对于 <code class="language-plaintext highlighter-rouge">a :: s</code> 的匹配性质</h5>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Lemma</span><span class="w"> </span><span class="no">app_ne</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="no">re1</span><span class="p">,</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">Lemma</span><span class="w"> </span><span class="no">app_ne</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="no">re1</span><span class="p">,</span><span class="w">
     </span><span class="no">a</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="p">(</span><span class="no">App</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="no">re1</span><span class="p">)</span><span class="w"> </span><span class="o">↔</span><span class="w">
     </span><span class="p">([</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re1</span><span class="p">)</span><span class="w"> </span><span class="o">∨</span><span class="w">
     </span><span class="o">∃</span><span class="no">s0</span><span class="w"> </span><span class="no">s1</span><span class="p">,</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">s0</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="no">s0</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re0</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="no">s1</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re1</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 <p>the second rule is more interesting. It states the <em>property</em> of <code class="language-plaintext highlighter-rouge">app</code>:</p>
 <blockquote>
   <p>App re0 re1 匹配 a::s 当且仅当  (re0 匹配空字符串 且 a::s 匹配 re1)  或  (s=s0++s1，其中 a::s0 匹配 re0 且 s1 匹配 re1)。</p>
@@ -791,20 +1038,26 @@ we need to be able to <em>test equality</em> for each <code class="language-plai
 
 <p>the relation <em><code class="language-plaintext highlighter-rouge">re'</code> is a derivative of <code class="language-plaintext highlighter-rouge">re</code> on <code class="language-plaintext highlighter-rouge">a</code></em> is defind as follows:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Definition</span><span class="w"> </span><span class="no">is_der</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="no">re'</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Definition</span><span class="w"> </span><span class="no">is_der</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="no">re'</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="o">∀</span><span class="no">s</span><span class="p">,</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re</span><span class="w"> </span><span class="o">↔</span><span class="w"> </span><span class="no">s</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="no">re'</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h5 id="4-实现-derive">4. 实现 derive</h5>
 
 <p>Now we can impl <code class="language-plaintext highlighter-rouge">derive</code> by follwing <code class="language-plaintext highlighter-rouge">2</code>, the property.
 In paper we have:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>∂ₐ(r · s) = ∂ₐr · s + ν(r) · ∂ₐs       -- subscriprt "a" meaning "respective to a" 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>∂ₐ(r · s) = ∂ₐr · s + ν(r) · ∂ₐs       -- subscriprt "a" meaning "respective to a" 
 
 where 
   ν(r) = nullable(r) ? ε : ∅ 
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>In our Coq implementation, <code class="language-plaintext highlighter-rouge">nullable(r) == match_eps(r)</code>,</p>
 
@@ -813,77 +1066,69 @@ where
 <code class="language-plaintext highlighter-rouge">∀r, ε · r = r</code>, 
 we can be more straightforward by expanding out <code class="language-plaintext highlighter-rouge">v(r)</code>:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Fixpoint</span><span class="w"> </span><span class="no">derive</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">re</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">@</span><span class="no">reg_exp</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">@</span><span class="no">reg_exp</span><span class="w"> </span><span class="no">ascii</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">Fixpoint</span><span class="w"> </span><span class="no">derive</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">re</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">@</span><span class="no">reg_exp</span><span class="w"> </span><span class="no">ascii</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">@</span><span class="no">reg_exp</span><span class="w"> </span><span class="no">ascii</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">..</span><span class="pi">.</span><span class="w">
  </span><span class="err">|</span><span class="w"> </span><span class="no">App</span><span class="w"> </span><span class="no">r1</span><span class="w"> </span><span class="no">r2</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="no">match_eps</span><span class="w"> </span><span class="no">r1</span><span class="w">                            </span><span class="c">(** nullable(r) ? **)</span><span class="w">
       </span><span class="kr">then</span><span class="w"> </span><span class="no">Union</span><span class="w"> </span><span class="p">(</span><span class="no">App</span><span class="w"> </span><span class="p">(</span><span class="no">derive</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="no">r1</span><span class="p">)</span><span class="w"> </span><span class="no">r2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">derive</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="no">r2</span><span class="p">)</span><span class="w">      </span><span class="c">(**  ∂ₐr · s + ∂ₐs **)</span><span class="w">
       </span><span class="kr">else</span><span class="w"> </span><span class="no">App</span><span class="w"> </span><span class="p">(</span><span class="no">derive</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="no">r1</span><span class="p">)</span><span class="w"> </span><span class="no">r2</span><span class="w">                            </span><span class="c">(**  ∂ₐr · s       **)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 
-                <hr>
-
-                
-                <!-- 多说 Share start -->
-                </style>
-                <div class="ds-share" style="text-align: right" data-thread-key="/2019/01/07/sf-lf-07-indprop"
-                    data-title="「SF-LC」7 Ind Prop" data-url="http://localhost:4000/huxblog-boilerplate/2019/01/07/sf-lf-07-indprop/"
-                    data-images="http://localhost:4000/huxblog-boilerplate/img/home-bg.jpg"
-                    data-content="Inductively Defined Propositions
-
-The 3rd way to state Evenness…
-
-Besides:
-
-T... | 你的博客 | Your Blog ">
-                    <div class="ds-share-inline">
-                        <ul class="ds-share-icons-16">
-                            <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                            <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                            <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                            <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                        </ul>
-                        <div class="ds-share-icons-more">
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <!-- 多说 Share end-->
-                
-
-
+                <hr style="visibility: hidden;">
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/huxblog-boilerplate/2019/01/06/sf-lf-06-logic/"
-                            data-toggle="tooltip" data-placement="top" title="「SF-LC」6 Logic">&larr; Previous
-                            Post</a>
+                        <a href="/2019/01/06/sf-lf-06-logic/" data-toggle="tooltip" data-placement="top" title="「SF-LC」6 Logic">
+                        Previous<br>
+                        <span>「SF-LC」6 Logic</span>
+                        </a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/huxblog-boilerplate/2019/01/08/sf-lf-08-map/" data-toggle="tooltip"
-                            data-placement="top" title="「SF-LC」8 Maps">Next Post &rarr;</a>
+                        <a href="/2019/01/08/sf-lf-08-map/" data-toggle="tooltip" data-placement="top" title="「SF-LC」8 Maps">
+                        Next<br>
+                        <span>「SF-LC」8 Maps</span>
+                        </a>
                     </li>
                     
                 </ul>
-
+                <hr style="visibility: hidden;">
 
                 
-                <!-- 多说评论框 start -->
+                <!-- disqus 评论框 start -->
                 <div class="comment">
-                    <div class="ds-thread" data-thread-key="/2019/01/07/sf-lf-07-indprop" data-title="「SF-LC」7 Ind Prop"
-                        data-url="http://localhost:4000/huxblog-boilerplate/2019/01/07/sf-lf-07-indprop/">
-                    </div>
+                    <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
-                <!-- 多说评论框 end -->
+                <!-- disqus 评论框 end -->
                 
 
                 
+            </div>  
 
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
             </div>
+        
 
-            <!-- Sidebar Container -->
+    <!-- Sidebar Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
@@ -891,344 +1136,195 @@ T... | 你的博客 | Your Blog ">
 
                 <!-- Featured Tags -->
                 
-                <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#知乎" title="知乎" rel="14">
-                            知乎
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#产品" title="产品" rel="6">
-                            产品
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#UX/UI" title="UX/UI" rel="6">
-                            UX/UI
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#阿里" title="阿里" rel="3">
-                            阿里
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Web" title="Web" rel="20">
-                            Web
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#hUX 随想录" title="hUX 随想录" rel="2">
-                            hUX 随想录
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Meta" title="Meta" rel="3">
-                            Meta
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#前端开发" title="前端开发" rel="3">
-                            前端开发
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#JavaScript" title="JavaScript" rel="5">
-                            JavaScript
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#译" title="译" rel="2">
-                            译
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#CSS" title="CSS" rel="2">
-                            CSS
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Slides" title="Slides" rel="3">
-                            Slides
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#PWA" title="PWA" rel="8">
-                            PWA
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#微信" title="微信" rel="2">
-                            微信
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#En" title="En" rel="2">
-                            En
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#计算理论" title="计算理论" rel="2">
-                            计算理论
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#笔记" title="笔记" rel="39">
-                            笔记
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Vim" title="Vim" rel="2">
-                            Vim
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#LF (逻辑基础)" title="LF (逻辑基础)" rel="16">
-                            LF (逻辑基础)
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#SF (软件基础)" title="SF (软件基础)" rel="36">
-                            SF (软件基础)
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Coq" title="Coq" rel="36">
-                            Coq
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#PLF (编程语言基础)" title="PLF (编程语言基础)" rel="19">
-                            PLF (编程语言基础)
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#基础" title="基础" rel="2">
-                            基础
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#C" title="C" rel="2">
-                            C
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#C++" title="C++" rel="2">
-                            C++
-                        </a>
-                        
-                        
-                    </div>
-                </section>
-                
+
+
+<section>
+    
+        <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        
+        
+        
+                <a data-sort="0065" 
+                    href="/archive/?tag=%E7%9F%A5%E4%B9%8E"
+                    title="知乎"
+                    rel="14">知乎</a>
+        
+                <a data-sort="0039" 
+                    href="/archive/?tag=%E7%AC%94%E8%AE%B0"
+                    title="笔记"
+                    rel="40">笔记</a>
+        
+                <a data-sort="0043" 
+                    href="/archive/?tag=Coq"
+                    title="Coq"
+                    rel="36">Coq</a>
+        
+                <a data-sort="0043" 
+                    href="/archive/?tag=SF+%28%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%29"
+                    title="SF (软件基础)"
+                    rel="36">SF (软件基础)</a>
+        
+                <a data-sort="0057" 
+                    href="/archive/?tag=Web"
+                    title="Web"
+                    rel="22">Web</a>
+        
+                <a data-sort="0060" 
+                    href="/archive/?tag=PLF+%28%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%29"
+                    title="PLF (编程语言基础)"
+                    rel="19">PLF (编程语言基础)</a>
+        
+                <a data-sort="0063" 
+                    href="/archive/?tag=LF+%28%E9%80%BB%E8%BE%91%E5%9F%BA%E7%A1%80%29"
+                    title="LF (逻辑基础)"
+                    rel="16">LF (逻辑基础)</a>
+        
+                <a data-sort="0071" 
+                    href="/archive/?tag=PWA"
+                    title="PWA"
+                    rel="8">PWA</a>
+        
+                <a data-sort="0073" 
+                    href="/archive/?tag=%E4%BA%A7%E5%93%81"
+                    title="产品"
+                    rel="6">产品</a>
+        
+                <a data-sort="0073" 
+                    href="/archive/?tag=UX%2FUI"
+                    title="UX/UI"
+                    rel="6">UX/UI</a>
+        
+                <a data-sort="0075" 
+                    href="/archive/?tag=JavaScript"
+                    title="JavaScript"
+                    rel="4">JavaScript</a>
+        
+                <a data-sort="0075" 
+                    href="/archive/?tag=Meta"
+                    title="Meta"
+                    rel="4">Meta</a>
+        
+                <a data-sort="0075" 
+                    href="/archive/?tag=Slides"
+                    title="Slides"
+                    rel="4">Slides</a>
+        
+                <a data-sort="0076" 
+                    href="/archive/?tag=%E8%AF%91"
+                    title="译"
+                    rel="3">译</a>
+        
+                <a data-sort="0076" 
+                    href="/archive/?tag=%E9%98%BF%E9%87%8C"
+                    title="阿里"
+                    rel="3">阿里</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=%E5%9F%BA%E7%A1%80"
+                    title="基础"
+                    rel="2">基础</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=%E5%BE%AE%E4%BF%A1"
+                    title="微信"
+                    rel="2">微信</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA"
+                    title="计算理论"
+                    rel="2">计算理论</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=C"
+                    title="C"
+                    rel="2">C</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=C%2B%2B"
+                    title="C++"
+                    rel="2">C++</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=CSS"
+                    title="CSS"
+                    rel="2">CSS</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=En"
+                    title="En"
+                    rel="2">En</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=Vim"
+                    title="Vim"
+                    rel="2">Vim</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=hUX+%E9%9A%8F%E6%83%B3%E5%BD%95"
+                    title="hUX 随想录"
+                    rel="2">hUX 随想录</a>
+    </div>
+</section>
+
 
                 <!-- Friends Blog -->
                 
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    
-                    <li><a href="http://huangxuan.me">Hux Blog</a></li>
-                    
-                    <li><a href="#">Foo</a></li>
-                    
-                    <li><a href="#">Bar</a></li>
-                    
-                    <li><a href="#">Example Friends</a></li>
-                    
-                    <li><a href="#">It helps SEO</a></li>
-                    
-                </ul>
-                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="http://mida.re/">乱序（Midare）</a></li>
+  
+  <li><a href="https://ebnbin.dev/">Ebn Zhang</a></li>
+  
+  <li><a href="http://kunq.me">Kun Qian</a></li>
+  
+  <li><a href="https://sherrywoo.me/">Sherry Woo</a></li>
+  
+  <li><a href="http://blog.smdcn.net">SmdCn</a></li>
+  
+  <li><a href="http://tiye.me/">JiyinYiyong</a></li>
+  
+  <li><a href="http://dhong.co">DHong Say</a></li>
+  
+  <li><a href="http://ingf.github.io/">尹峰以为</a></li>
+  
+</ul>
+
             </div>
         </div>
     </div>
 </article>
 
+<!-- add support for mathjax by voleking-->
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
-    // dynamic User by Hux
-    var _user = 'huxblog';
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "hux";
+    var disqus_identifier = "/2019/01/07/sf-lf-07-indprop";
+    var disqus_url = "http://localhost:4000/2019/01/07/sf-lf-07-indprop/";
 
-    // duoshuo comment query.
-    var duoshuoQuery = { short_name: _user };
-    (function () {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript'; ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- 多说公共JS代码 end -->
+<!-- disqus 公共JS代码 end -->
 
 
-
-
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-        var d = document, t = 'script',
-            o = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        o.src = u;
-        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-        s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-        anchors.options = {
-            visible: 'always',
-            placement: 'right',
-            icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link {
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top: -0.1em;
-        }
-    }
-</style>
-
-
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
-                    
-
-                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
-                    
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a target="_blank" href="http://weibo.com/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-
-
-                    
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://github.com/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; Your Blog 2023
-                    <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
-                    </iframe>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/huxblog-boilerplate/js/jquery.min.js "></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/huxblog-boilerplate/js/bootstrap.min.js "></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/huxblog-boilerplate/js/hux-blog.min.js "></script>
 
 
 <!-- async load function -->
@@ -1242,15 +1338,142 @@ T... | 你的博客 | Your Blog ">
       s.parentNode.insertBefore(o, s);
     }
 </script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'right',
+          // icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  <li>
+    <a href="https://twitter.com/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="http://weibo.com/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Hux Blog 2023
+                    <br>
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Simple Jekyll Search -->
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
      so Huxblog drops it officially.
 
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
 -->
 <!--
     <script>
@@ -1262,25 +1485,16 @@ T... | 你的博客 | Your Blog ">
 -->
 
 
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
+
+
+
+
 
 <!--fastClick.js -->
 <script>
-    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -1293,10 +1507,12 @@ T... | 你的博客 | Your Blog ">
     var _gaDomain = 'huangxuan.me';
 
     // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', _gaId, _gaDomain);
     ga('send', 'pageview');
@@ -1306,21 +1522,130 @@ T... | 你的博客 | Your Blog ">
 
 <!-- Baidu Tongji -->
 
-<script>
-    // dynamic User by Hux
-    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
 
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        // interop with multilangual 
+        if ('' == 'true') {
+            _containerSelector = 'div.post-container.active'
+        } else {
+            _containerSelector = 'div.post-container'
+        }
+
+        // init
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        // clean
+        $(selector).html('')
+
+        // appending
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
 </script>
 
 
+
+<!-- Multi-Lingual -->
+
+
+<!-- Simple Jekyll Search -->
+<script>
+    // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
+    function htmlDecode(input) {
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/search.json',
+        searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
+        noResultsText: 'No results',
+        limit: 50,
+        fuzzy: false,
+        // a hack to get escaped subtitle unescaped. for some reason, 
+        // post.subtitle w/o escape filter nuke entire search.
+        templateMiddleware: function (prop, value, template) {
+            if (prop === 'subtitle' || prop === 'title') {
+                if (value.indexOf("code")) {
+                    return htmlDecode(value);
+                } else {
+                    return value;
+                }
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        var $searchPage = $('.search-page');
+        var $searchOpen = $('.search-icon');
+        var $searchClose = $('.search-icon-close');
+        var $searchInput = $('#search-input');
+        var $body = $('body');
+
+        $searchOpen.on('click', function (e) {
+            e.preventDefault();
+            $searchPage.toggleClass('search-active');
+            var prevClasses = $body.attr('class') || '';
+            setTimeout(function () {
+                $body.addClass('no-scroll');
+            }, 400)
+
+            if ($searchPage.hasClass('search-active')) {
+                $searchClose.on('click', function (e) {
+                    e.preventDefault();
+                    $searchPage.removeClass('search-active');
+                    $body.attr('class', prevClasses);  // from closure 
+                });
+                $searchInput.focus();
+            }
+        });
+    });
+</script>
 
 
 <!-- Image to hack wechat -->

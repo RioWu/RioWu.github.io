@@ -5,35 +5,72 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/huxblog-boilerplate/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员">
+    <meta name="keywords" content="黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计">
+    <meta name="theme-color" content="#000000">
 
-    <title>「SF-LC」12 Imp - 你的博客 | Your Blog</title>
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="「SF-LC」12 Imp - 黄玄的博客 | Hux Blog">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="1
+2
+3
+4
+5
+6
+Z ::= X;;
+Y ::= 1;;
+WHILE ~(Z = 0) DO
+  Y ::= Y * Z;;
+  Z ::= Z - 1
+END
 
-    <link rel="canonical" href="http://localhost:4000/huxblog-boilerplate/2019/01/12/sf-lf-12-imp/">
+">
+    
+    <meta property="article:published_time" content=" 2019-01-12T00:00:00Z">
+    
+    
+    <meta property="article:author" content="Hux">
+    
+    
+    <meta property="article:tag" content="LF (逻辑基础)">
+    
+    <meta property="article:tag" content="SF (软件基础)">
+    
+    <meta property="article:tag" content="Coq">
+    
+    <meta property="article:tag" content="笔记">
+    
+    
+    <meta property="og:image" content="http://localhost:4000https://github.com/Huxpro.png">
+    <meta property="og:url" content="http://localhost:4000/2019/01/12/sf-lf-12-imp/">
+    <meta property="og:site_name" content="黄玄的博客 | Hux Blog">
+
+    <title>「SF-LC」12 Imp - 黄玄的博客 | Hux Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2019/01/12/sf-lf-12-imp/">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/huxblog-boilerplate/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" /css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/huxblog-boilerplate/css/hux-blog.min.css">
-
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/huxblog-boilerplate/css/syntax.css">
+    <link rel="stylesheet" href=" /css/hux-blog.min.css">
 
     <!-- Custom Fonts -->
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -45,6 +82,10 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-6487568398225121" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 
@@ -52,116 +93,184 @@
 <body ontouchstart="">
 
     <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/huxblog-boilerplate/">Your Blog</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/huxblog-boilerplate/">Home</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/about/">About</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/archive/">Archive</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/offline.html">Offline</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/huxblog-boilerplate/tags/">Tags</a>
-                    </li>
-                    
-                </ul>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+    
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Hux Blog</a>
             </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+        <!-- /.container -->
+    </nav>
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        var __HuxNav__ = {
+            close: function () {
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function () {
+                    // prevent frequently toggle
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            },
+            open: function () {
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
         }
-    }
-</script>
 
+        // Bind Event
+        $toggle.addEventListener('click', function (e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                __HuxNav__.close()
+            } else {
+                __HuxNav__.open()
+            }
+        })
+
+        /**
+         * Since Fastclick is used to delegate 'touchstart' globally
+         * to hack 300ms delay in iOS by performing a fake 'click',
+         * Using 'e.stopPropagation' to stop 'touchstart' event from 
+         * $toggle/$collapse will break global delegation.
+         * 
+         * Instead, we use a 'e.target' filter to prevent handler
+         * added to document close HuxNav.  
+         *
+         * Also, we use 'click' instead of 'touchstart' as compromise
+         */
+        document.addEventListener('click', function (e) {
+            if (e.target == $toggle) return;
+            if (e.target.className == 'icon-bar') return;
+            __HuxNav__.close();
+        })
+    </script>
+    <!-- Search -->
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/huxblog-boilerplate/img/home-bg.jpg" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
 
 <!-- Post Header -->
+
+
+
 <style type="text/css">
-    header.intro-header {
-        background-image: url('/huxblog-boilerplate/img/home-bg.jpg')
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/home-bg.jpg');
+        background: ;
     }
+
+    
 </style>
-<header class="intro-header">
+
+
+
+
+<header class="intro-header style-text" >
+
+    <div class="header-mask"></div>
+    
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#LF (逻辑基础)" title="LF (逻辑基础)">LF (逻辑基础)</a>
+                        <a class="tag" href="/archive/?tag=LF+%28%E9%80%BB%E8%BE%91%E5%9F%BA%E7%A1%80%29" title="LF (逻辑基础)">LF (逻辑基础)</a>
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#SF (软件基础)" title="SF (软件基础)">SF (软件基础)</a>
+                        <a class="tag" href="/archive/?tag=SF+%28%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%29" title="SF (软件基础)">SF (软件基础)</a>
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#Coq" title="Coq">Coq</a>
+                        <a class="tag" href="/archive/?tag=Coq" title="Coq">Coq</a>
                         
-                        <a class="tag" href="/huxblog-boilerplate/tags/#笔记" title="笔记">笔记</a>
+                        <a class="tag" href="/archive/?tag=%E7%AC%94%E8%AE%B0" title="笔记">笔记</a>
                         
                     </div>
                     <h1>「SF-LC」12 Imp</h1>
                     
-                    
                     <h2 class="subheading">Logical Foundations - Simple Imperative Programs</h2>
-                    
                     <span class="meta">Posted by Hux on January 12, 2019</span>
                 </div>
             </div>
@@ -169,24 +278,39 @@
     </div>
 </header>
 
+
+
+
+
+
+
 <!-- Post Content -->
 <article>
     <div class="container">
         <div class="row">
 
-            <!-- Post Container -->
+    <!-- Post Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <div class="language-pascal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Z</span> <span class="p">::=</span> <span class="n">X</span><span class="p">;;</span>
+                <!-- Multi-Lingual -->
+                
+
+				<div class="language-pascal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="n">Z</span> <span class="p">::=</span> <span class="n">X</span><span class="p">;;</span>
 <span class="n">Y</span> <span class="p">::=</span> <span class="m">1</span><span class="p">;;</span>
 <span class="k">WHILE</span> <span class="p">~(</span><span class="n">Z</span> <span class="p">=</span> <span class="m">0</span><span class="p">)</span> <span class="k">DO</span>
   <span class="n">Y</span> <span class="p">::=</span> <span class="n">Y</span> <span class="p">*</span> <span class="n">Z</span><span class="p">;;</span>
   <span class="n">Z</span> <span class="p">::=</span> <span class="n">Z</span> <span class="p">-</span> <span class="m">1</span>
 <span class="k">END</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>A weird convention through out all IMP is:</p>
 <ul>
@@ -199,7 +323,19 @@
 
 <h3 id="abstract-syntax">Abstract Syntax</h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">a</span><span class="w"> </span><span class="p">::=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="no">a</span><span class="w"> </span><span class="p">::=</span><span class="w">
     </span><span class="p">|</span><span class="w"> </span><span class="no">nat</span><span class="w">
     </span><span class="p">|</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="no">a</span><span class="w">
     </span><span class="p">|</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="no">a</span><span class="w">
@@ -211,9 +347,21 @@
     </span><span class="p">|</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="o">≤</span><span class="w"> </span><span class="no">a</span><span class="w">
     </span><span class="p">|</span><span class="w"> </span><span class="o">¬</span><span class="no">b</span><span class="w">
     </span><span class="p">|</span><span class="w"> </span><span class="no">b</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="no">b</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">ANum</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">APlus</span><span class="w"> </span><span class="p">(</span><span class="no">a1</span><span class="w"> </span><span class="no">a2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">AMinus</span><span class="w"> </span><span class="p">(</span><span class="no">a1</span><span class="w"> </span><span class="no">a2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w">
@@ -225,13 +373,29 @@
   </span><span class="p">|</span><span class="w"> </span><span class="no">BLe</span><span class="w"> </span><span class="p">(</span><span class="no">a1</span><span class="w"> </span><span class="no">a2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">BNot</span><span class="w"> </span><span class="p">(</span><span class="no">b</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bexp</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">BAnd</span><span class="w"> </span><span class="p">(</span><span class="no">b1</span><span class="w"> </span><span class="no">b2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bexp</span><span class="p">)</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="evaluation">Evaluation</h3>
 
 <p>TODO: is this considered as “denotational semantics”?</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Fixpoint</span><span class="w"> </span><span class="no">aeval</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="k">Fixpoint</span><span class="w"> </span><span class="no">aeval</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="kr">match</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="kp">with</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">ANum</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="no">n</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">APlus</span><span class="w"> </span><span class="no">a1</span><span class="w"> </span><span class="no">a2</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="p">(</span><span class="no">aeval</span><span class="w"> </span><span class="no">a1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="no">aeval</span><span class="w"> </span><span class="no">a2</span><span class="p">)</span><span class="w">
@@ -247,12 +411,14 @@
   </span><span class="p">|</span><span class="w"> </span><span class="no">BNot</span><span class="w"> </span><span class="no">b1</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="no">negb</span><span class="w"> </span><span class="p">(</span><span class="no">beval</span><span class="w"> </span><span class="no">b1</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">BAnd</span><span class="w"> </span><span class="no">b1</span><span class="w"> </span><span class="no">b2</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="no">andb</span><span class="w"> </span><span class="p">(</span><span class="no">beval</span><span class="w"> </span><span class="no">b1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">beval</span><span class="w"> </span><span class="no">b2</span><span class="p">)</span><span class="w">
   </span><span class="kr">end</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Supposed we have a <code class="language-plaintext highlighter-rouge">Fixpoint optimize_0plus (a:aexp) : aexp</code></p>
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">optimize_0plus_sound</span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">a</span><span class="p">,</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">optimize_0plus_sound</span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">a</span><span class="p">,</span><span class="w">
   </span><span class="no">aeval</span><span class="w"> </span><span class="p">(</span><span class="no">optimize_0plus</span><span class="w"> </span><span class="no">a</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">aeval</span><span class="w"> </span><span class="no">a</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>During the proof, many cases of <code class="language-plaintext highlighter-rouge">destruct aexp</code> are similar!
 Recursive cases such as <code class="language-plaintext highlighter-rouge">APlus, AMinus, AMult</code> all require duplicated <code class="language-plaintext highlighter-rouge">IH</code> application.</p>
@@ -283,12 +449,17 @@ That’s a hint that we need to furthur case analysis by <code class="language-p
 
 <p>Super blindly but useful: (only leave the “interesting” one.)</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kp">induction</span><span class="w"> </span><span class="no">a</span><span class="p">;</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="kp">induction</span><span class="w"> </span><span class="no">a</span><span class="p">;</span><span class="w">
     </span><span class="c">(* Most cases follow directly by the IH... *)</span><span class="w">
     </span><span class="kp">try</span><span class="w"> </span><span class="p">(</span><span class="kp">simpl</span><span class="p">;</span><span class="w"> </span><span class="kp">rewrite</span><span class="w"> </span><span class="no">IHa1</span><span class="p">;</span><span class="w"> </span><span class="kp">rewrite</span><span class="w"> </span><span class="no">IHa2</span><span class="p">;</span><span class="w"> </span><span class="ne">reflexivity</span><span class="p">)</span><span class="pi">.</span><span class="w">
     </span><span class="c">(* ... or are immediate by definition *)</span><span class="w">
     </span><span class="kp">try</span><span class="w"> </span><span class="ne">reflexivity</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">.</code> is the atomic 
 <code class="language-plaintext highlighter-rouge">;</code> cannot be stepped into…</p>
@@ -302,10 +473,13 @@ That’s a hint that we need to furthur case analysis by <code class="language-p
 
 <h4 id="repeat-tacticals"><code class="language-plaintext highlighter-rouge">repeat</code> tacticals</h4>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">In10</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">In</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">;</span><span class="mi">2</span><span class="p">;</span><span class="mi">3</span><span class="p">;</span><span class="mi">4</span><span class="p">;</span><span class="mi">5</span><span class="p">;</span><span class="mi">6</span><span class="p">;</span><span class="mi">7</span><span class="p">;</span><span class="mi">8</span><span class="p">;</span><span class="mi">9</span><span class="p">;</span><span class="mi">10</span><span class="p">]</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">In10</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">In</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">;</span><span class="mi">2</span><span class="p">;</span><span class="mi">3</span><span class="p">;</span><span class="mi">4</span><span class="p">;</span><span class="mi">5</span><span class="p">;</span><span class="mi">6</span><span class="p">;</span><span class="mi">7</span><span class="p">;</span><span class="mi">8</span><span class="p">;</span><span class="mi">9</span><span class="p">;</span><span class="mi">10</span><span class="p">]</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
   </span><span class="kp">repeat</span><span class="w"> </span><span class="p">(</span><span class="kp">try</span><span class="w"> </span><span class="p">(</span><span class="no">left</span><span class="p">;</span><span class="w"> </span><span class="ne">reflexivity</span><span class="p">);</span><span class="w"> </span><span class="no">right</span><span class="p">)</span><span class="pi">.</span><span class="w"> </span><span class="k">Qed</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <ul>
   <li>stop when it fails</li>
@@ -323,9 +497,11 @@ construction process diverges means we have failed to construct a proof, not tha
   <li><code class="language-plaintext highlighter-rouge">Tactic Notation</code>: syntax extension for tactics (good for simple <em>macros</em>)</li>
 </ul>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Tactic</span><span class="w"> </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"simpl_and_try"</span><span class="w"> </span><span class="no">tactic</span><span class="p">(</span><span class="no">c</span><span class="p">)</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="no">Tactic</span><span class="w"> </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"simpl_and_try"</span><span class="w"> </span><span class="no">tactic</span><span class="p">(</span><span class="no">c</span><span class="p">)</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="kp">simpl</span><span class="p">;</span><span class="w"> </span><span class="kp">try</span><span class="w"> </span><span class="no">c</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Ltac</code>: scripting language for tactics (good for more sophisticated proof engineering)</li>
@@ -373,7 +549,22 @@ Exactly <em>Big Step / Structural Operational Semantics</em>.</p>
   <p>译注：求值关系不满足对称性，因为它是有方向的。</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">aevalR</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">aevalR</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">E_ANum</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w">
       </span><span class="no">aevalR</span><span class="w"> </span><span class="p">(</span><span class="no">ANum</span><span class="w"> </span><span class="no">n</span><span class="p">)</span><span class="w"> </span><span class="no">n</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">E_APlus</span><span class="w"> </span><span class="p">(</span><span class="no">e1</span><span class="w"> </span><span class="no">e2</span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">n1</span><span class="w"> </span><span class="no">n2</span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w">
@@ -388,7 +579,7 @@ Exactly <em>Big Step / Structural Operational Semantics</em>.</p>
       </span><span class="no">aevalR</span><span class="w"> </span><span class="no">e1</span><span class="w"> </span><span class="no">n1</span><span class="w"> </span><span class="o">→</span><span class="w">
       </span><span class="no">aevalR</span><span class="w"> </span><span class="no">e2</span><span class="w"> </span><span class="no">n2</span><span class="w"> </span><span class="o">→</span><span class="w">
       </span><span class="no">aevalR</span><span class="w"> </span><span class="p">(</span><span class="no">AMult</span><span class="w"> </span><span class="no">e1</span><span class="w"> </span><span class="no">e2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">n1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="no">n2</span><span class="p">)</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 <blockquote>
   <p>Noticed now we now define <code class="language-plaintext highlighter-rouge">inductive</code> in a mixed style: 
 some arg is before <code class="language-plaintext highlighter-rouge">:</code> (named), some are after <code class="language-plaintext highlighter-rouge">:</code> (anonymous).</p>
@@ -396,15 +587,38 @@ some arg is before <code class="language-plaintext highlighter-rouge">:</code> (
 
 <p>We could do this as well</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="no">E_APlus</span><span class="w"> </span><span class="p">(</span><span class="no">e1</span><span class="w"> </span><span class="no">e2</span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">n1</span><span class="w"> </span><span class="no">n2</span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="no">E_APlus</span><span class="w"> </span><span class="p">(</span><span class="no">e1</span><span class="w"> </span><span class="no">e2</span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">n1</span><span class="w"> </span><span class="no">n2</span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w">
       </span><span class="p">(</span><span class="no">H1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aevalR</span><span class="w"> </span><span class="no">e1</span><span class="w"> </span><span class="no">n1</span><span class="p">)</span><span class="w">
       </span><span class="p">(</span><span class="no">H2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aevalR</span><span class="w"> </span><span class="no">e2</span><span class="w"> </span><span class="no">n2</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w">
       </span><span class="no">aevalR</span><span class="w"> </span><span class="p">(</span><span class="no">APlus</span><span class="w"> </span><span class="no">e1</span><span class="w"> </span><span class="no">e2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">n1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="no">n2</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">Reserved Notation</code> allow us using the notation during the definition!</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Reserved</span><span class="w"> </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"e '\\' n"</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="no">left</span><span class="w"> </span><span class="no">associativity</span><span class="p">)</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="no">Reserved</span><span class="w"> </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"e '\\' n"</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="no">left</span><span class="w"> </span><span class="no">associativity</span><span class="p">)</span><span class="pi">.</span><span class="w">
 
 </span><span class="k">Inductive</span><span class="w"> </span><span class="no">aevalR</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">E_ANum</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w">
@@ -423,23 +637,31 @@ some arg is before <code class="language-plaintext highlighter-rouge">:</code> (
       </span><span class="p">(</span><span class="no">AMult</span><span class="w"> </span><span class="no">e1</span><span class="w"> </span><span class="no">e2</span><span class="p">)</span><span class="w"> </span><span class="err">\\</span><span class="w"> </span><span class="p">(</span><span class="no">n1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="no">n2</span><span class="p">)</span><span class="w">
 
   </span><span class="no">where</span><span class="w"> </span><span class="s2">"e '\\' n"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">aevalR</span><span class="w"> </span><span class="no">e</span><span class="w"> </span><span class="no">n</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">type_scope</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>I hated this infix <code class="language-plaintext highlighter-rouge">\\</code> notation…it tries to mimic <code class="language-plaintext highlighter-rouge">⇓</code> (double down arrow).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                           e1 \\ n1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>                           e1 \\ n1
                            e2 \\ n2
                      -------------------- (E_APlus)
                      APlus e1 e2 \\ n1+n2
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>is actually:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                           e1 ⇓ n1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>                           e1 ⇓ n1
                            e2 ⇓ n2
                      -------------------- (E_APlus)
                      APlus e1 e2 ⇓ n1+n2
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <blockquote>
   <p>Coq Intensive:
@@ -455,9 +677,11 @@ If you have two variables above the line. Think about if you need <code class="l
 
 <h4 id="case-1---safe-division">case 1 - safe division</h4>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">ADiv</span><span class="w"> </span><span class="p">(</span><span class="no">a1</span><span class="w"> </span><span class="no">a2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="pi">.</span><span class="w"> </span><span class="c">(* &lt;--- NEW *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 <ul>
   <li>functional: how to return <code class="language-plaintext highlighter-rouge">ADiv (ANum 5) (ANum 0)</code>? probably has to be <code class="language-plaintext highlighter-rouge">option</code> (Coq is total!)</li>
   <li>relational: <code class="language-plaintext highlighter-rouge">(a1 \\ n1) → (a2 \\ n2) → (n2 &gt; 0) → (mult n2 n3 = n1) → (ADiv a1 a2) \\ n3</code>.
@@ -469,9 +693,11 @@ If you have two variables above the line. Think about if you need <code class="l
 
 <h4 id="case-2---non-determinism">case 2 - non-determinism</h4>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">AAny</span><span class="w"> </span><span class="c">(* &lt;--- NEW *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 <ul>
   <li>functional: not a deterministic function…</li>
   <li>relational: <code class="language-plaintext highlighter-rouge">E_Any (n : nat) : AAny \\ n</code> … just say it’s the case.</li>
@@ -498,14 +724,17 @@ If you have two variables above the line. Think about if you need <code class="l
   <p>A <em>machine state</em> (or just <em>state</em>) represents the current values of <em>all variables</em> at some point in the execution of a program.</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Definition</span><span class="w"> </span><span class="no">state</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">total_map</span><span class="w"> </span><span class="no">nat</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">Definition</span><span class="w"> </span><span class="no">state</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">total_map</span><span class="w"> </span><span class="no">nat</span><span class="pi">.</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="syntax">Syntax</h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">AId</span><span class="w"> </span><span class="p">(</span><span class="no">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">string</span><span class="p">)</span><span class="w"> </span><span class="c">(* &lt;--- NEW *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="notations--coercisons--meta-programming-and-ast-quasi-quotation">Notations &amp; Coercisons – “meta-programming” and AST quasi-quotation</h3>
 
@@ -521,7 +750,26 @@ If you have two variables above the line. Think about if you need <code class="l
 
 <h4 id="coqs-notation-scope--coercision--built-in-quasi-quotation">Coq’s <em>Notation Scope</em> + Coercision == built-in Quasi-quotation</h4>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">(** Coercision for constructors **)</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="c">(** Coercision for constructors **)</span><span class="w">
 </span><span class="no">Coercion</span><span class="w"> </span><span class="no">AId</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">string</span><span class="w"> </span><span class="o">&gt;-&gt;</span><span class="w"> </span><span class="no">aexp</span><span class="pi">.</span><span class="w">
 </span><span class="no">Coercion</span><span class="w"> </span><span class="no">ANum</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="o">&gt;-&gt;</span><span class="w"> </span><span class="no">aexp</span><span class="pi">.</span><span class="w">
 
@@ -540,13 +788,21 @@ If you have two variables above the line. Think about if you need <code class="l
 </span><span class="k">Definition</span><span class="w"> </span><span class="no">example_aexp</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="no">X</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="o">%</span><span class="no">imp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="pi">.</span><span class="w">
 </span><span class="k">Definition</span><span class="w"> </span><span class="no">example_aexp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="no">X</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="o">%</span><span class="no">imp</span><span class="pi">.</span><span class="w"> 
 </span><span class="k">Definition</span><span class="w"> </span><span class="no">example_aexp</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="no">X</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="o">%</span><span class="no">imp</span><span class="pi">.</span><span class="w">    </span><span class="c">(* can be inferred *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="evaluation-w-state-environment">Evaluation w/ State (Environment)</h3>
 
 <p>Noticed that the <code class="language-plaintext highlighter-rouge">st</code> has to be threaded all the way…</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Fixpoint</span><span class="w"> </span><span class="no">aeval</span><span class="w"> </span><span class="p">(</span><span class="no">st</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">Fixpoint</span><span class="w"> </span><span class="no">aeval</span><span class="w"> </span><span class="p">(</span><span class="no">st</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="kr">match</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="kp">with</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">AId</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="o">⇒</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="c">(* &lt;--- NEW *)</span><span class="w">              </span><span class="c">(** lookup the environment **)</span><span class="w">
   </span><span class="p">..</span><span class="pi">.</span><span class="w">
@@ -554,7 +810,7 @@ If you have two variables above the line. Think about if you need <code class="l
 </span><span class="k">Fixpoint</span><span class="w"> </span><span class="no">beval</span><span class="w"> </span><span class="p">(</span><span class="no">st</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">b</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bexp</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bool</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">..</span><span class="pi">.</span><span class="w">
 
 </span><span class="k">Compute</span><span class="w"> </span><span class="p">(</span><span class="no">aeval</span><span class="w"> </span><span class="p">(</span><span class="no">X</span><span class="w"> </span><span class="o">!-&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="no">X</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="o">%</span><span class="no">imp</span><span class="p">)</span><span class="pi">.</span><span class="w"> </span><span class="c">(** ===&gt; 13 : nat **)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="commands-statement">Commands (Statement)</h2>
 
@@ -565,60 +821,91 @@ If you have two variables above the line. Think about if you need <code class="l
   <p>we use <code class="language-plaintext highlighter-rouge">TEST</code> to avoid conflicting with the <code class="language-plaintext highlighter-rouge">if</code> and <code class="language-plaintext highlighter-rouge">IF</code> notations from the standard library.</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">com</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">com</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">CSkip</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">CAss</span><span class="w"> </span><span class="p">(</span><span class="no">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">string</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">CSeq</span><span class="w"> </span><span class="p">(</span><span class="no">c1</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">com</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">CIf</span><span class="w"> </span><span class="p">(</span><span class="no">b</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bexp</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">c1</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">com</span><span class="p">)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">CWhile</span><span class="w"> </span><span class="p">(</span><span class="no">b</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bexp</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">c</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">com</span><span class="p">)</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">notation</code> magics:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Bind</span><span class="w"> </span><span class="no">Scope</span><span class="w"> </span><span class="no">imp_scope</span><span class="w"> </span><span class="kp">with</span><span class="w"> </span><span class="no">com</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="no">Bind</span><span class="w"> </span><span class="no">Scope</span><span class="w"> </span><span class="no">imp_scope</span><span class="w"> </span><span class="kp">with</span><span class="w"> </span><span class="no">com</span><span class="pi">.</span><span class="w">
 </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"'SKIP'"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">CSkip</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
 </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"x '::=' a"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">CAss</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="no">a</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
 </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"c1 ;; c2"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">CSeq</span><span class="w"> </span><span class="no">c1</span><span class="w"> </span><span class="no">c2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="no">right</span><span class="w"> </span><span class="no">associativity</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
 </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"'WHILE' b 'DO' c 'END'"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">CWhile</span><span class="w"> </span><span class="no">b</span><span class="w"> </span><span class="no">c</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="no">right</span><span class="w"> </span><span class="no">associativity</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
 </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"'TEST' c1 'THEN' c2 'ELSE' c3 'FI'"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">CIf</span><span class="w"> </span><span class="no">c1</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="no">c3</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="no">right</span><span class="w"> </span><span class="no">associativity</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="unset-notations">Unset Notations</h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Unset</span><span class="w"> </span><span class="k">Printing</span><span class="w"> </span><span class="k">Notations</span><span class="pi">.</span><span class="w">  </span><span class="c">(** e1 + e2 -&gt; APlus e1 e2 **)</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">Unset</span><span class="w"> </span><span class="k">Printing</span><span class="w"> </span><span class="k">Notations</span><span class="pi">.</span><span class="w">  </span><span class="c">(** e1 + e2 -&gt; APlus e1 e2 **)</span><span class="w">
 </span><span class="kr">Set</span><span class="w"> </span><span class="k">Printing</span><span class="w"> </span><span class="no">Coercions</span><span class="pi">.</span><span class="w">    </span><span class="c">(** n -&gt; (ANum n) **)</span><span class="w">
 </span><span class="k">Set</span><span class="w"> </span><span class="k">Printing</span><span class="w"> </span><span class="k">All</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="the-locate-command">The <code class="language-plaintext highlighter-rouge">Locate</code> command</h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Locate</span><span class="w"> </span><span class="s2">"&amp;&amp;"</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="no">Locate</span><span class="w"> </span><span class="s2">"&amp;&amp;"</span><span class="pi">.</span><span class="w">
 
 </span><span class="c">(** give you two, [Print "&amp;&amp;"] only give you the default one **)</span><span class="w">
 </span><span class="k">Notation</span><span class="w">
 </span><span class="s2">"x &amp;&amp; y"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">andb</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="no">y</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">bool_scope</span><span class="w"> </span><span class="p">(</span><span class="no">default</span><span class="w"> </span><span class="no">interpretation</span><span class="p">)</span><span class="w">
 </span><span class="s2">"x &amp;&amp; y"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">BAnd</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="no">y</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">imp_scope</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="evaluating-commands">Evaluating Commands</h2>
 
 <p>Noticed that to <em>use quasi-quotation in pattern matching</em>, we need</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Open</span><span class="w"> </span><span class="no">Scope</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="no">Open</span><span class="w"> </span><span class="no">Scope</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
 </span><span class="err">...</span><span class="w">
   </span><span class="err">|</span><span class="w"> </span><span class="no">x</span><span class="w"> </span><span class="p">::=</span><span class="w"> </span><span class="no">a1</span><span class="w"> </span><span class="p">=&gt;</span><span class="w">     </span><span class="c">(**  CAss x a1  **)</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">c1</span><span class="w"> </span><span class="p">;;</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="p">=&gt;</span><span class="w">     </span><span class="c">(**  CSeq c1 c1 **)</span><span class="w">
 </span><span class="p">..</span><span class="pi">.</span><span class="w">
 </span><span class="no">Close</span><span class="w"> </span><span class="no">Scope</span><span class="w"> </span><span class="no">imp_scope</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>An infinite loop (the <code class="language-plaintext highlighter-rouge">%imp</code> scope is inferred)</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Definition</span><span class="w"> </span><span class="no">loop</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">com</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">Definition</span><span class="w"> </span><span class="no">loop</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">com</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="no">WHILE</span><span class="w"> </span><span class="no">true</span><span class="w"> </span><span class="no">DO</span><span class="w">
     </span><span class="no">SKIP</span><span class="w">
   </span><span class="no">END</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <blockquote>
   <p>The fact that <code class="language-plaintext highlighter-rouge">WHILE</code> loops don’t necessarily terminate makes defining an evaluation function tricky…</p>
@@ -628,16 +915,21 @@ If you have two variables above the line. Think about if you need <code class="l
 
 <p>In OCaml/Haskell, we simply recurse, but In Coq</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">|</span><span class="w"> </span><span class="no">WHILE</span><span class="w"> </span><span class="no">b</span><span class="w"> </span><span class="no">DO</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="no">END</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="no">beval</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">b</span><span class="p">)</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="err">|</span><span class="w"> </span><span class="no">WHILE</span><span class="w"> </span><span class="no">b</span><span class="w"> </span><span class="no">DO</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="no">END</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="no">beval</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">b</span><span class="p">)</span><span class="w">
                       </span><span class="kr">then</span><span class="w"> </span><span class="no">ceval_fun</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="p">(</span><span class="no">c</span><span class="w"> </span><span class="p">;;</span><span class="w"> </span><span class="no">WHILE</span><span class="w"> </span><span class="no">b</span><span class="w"> </span><span class="no">DO</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="no">END</span><span class="p">)</span><span class="w">
                       </span><span class="kr">else</span><span class="w"> </span><span class="no">st</span><span class="w">
 </span><span class="c">(** Cannot guess decreasing argument of fix **)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Well, if Coq allowed (potentially) non-terminating, the logic would be inconsistent:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Fixpoint</span><span class="w"> </span><span class="no">loop_false</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">False</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">loop_false</span><span class="w"> </span><span class="no">n</span><span class="pi">.</span><span class="w">   </span><span class="c">(** False is proved! **)</span><span class="w">
-</span></code></pre></div></div>
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">Fixpoint</span><span class="w"> </span><span class="no">loop_false</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">False</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">loop_false</span><span class="w"> </span><span class="no">n</span><span class="pi">.</span><span class="w">   </span><span class="c">(** False is proved! **)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="step-indexed-evaluator-succ">Step-Indexed Evaluator (SUCC)</h4>
 
@@ -657,21 +949,42 @@ If you have two variables above the line. Think about if you need <code class="l
 <p>Again, we are using some fancy notation <code class="language-plaintext highlighter-rouge">st=[c]=&gt;st'</code> to mimic <code class="language-plaintext highlighter-rouge">⇓</code>:
 In both PLT and TaPL, we are almost exclusively use Small-Step, but in PLC, Big-Step were used:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                      beval st b1 = true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>                      beval st b1 = true
                        st =[ c1 ]=&gt; st'
             ---------------------------------------  (E_IfTrue)
             st =[ TEST b1 THEN c1 ELSE c2 FI ]=&gt; st'
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>is really:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                        H; b1 ⇓ true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>                        H; b1 ⇓ true
                         H; c1 ⇓ H'
               ----------------------------------  (E_IfTrue)
               H; TEST b1 THEN c1 ELSE c2 FI ⇓ H'
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Reserved</span><span class="w"> </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"st '=[' c ']⇒' st'"</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="no">Reserved</span><span class="w"> </span><span class="k">Notation</span><span class="w"> </span><span class="s2">"st '=[' c ']⇒' st'"</span><span class="w"> </span><span class="p">(</span><span class="kp">at</span><span class="w"> </span><span class="no">level</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="pi">.</span><span class="w">
 </span><span class="k">Inductive</span><span class="w"> </span><span class="no">ceval</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">com</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">state</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="no">state</span><span class="w"> </span><span class="o">→</span><span class="w"> </span><span class="kr">Prop</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">..</span><span class="pi">.</span><span class="w">
 </span><span class="err">|</span><span class="w"> </span><span class="no">E_Seq</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">c1</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">st'</span><span class="w"> </span><span class="no">st''</span><span class="p">,</span><span class="w">
@@ -684,7 +997,7 @@ In both PLT and TaPL, we are almost exclusively use Small-Step, but in PLC, Big-
       </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">TEST</span><span class="w"> </span><span class="no">b</span><span class="w"> </span><span class="no">THEN</span><span class="w"> </span><span class="no">c1</span><span class="w"> </span><span class="no">ELSE</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="no">FI</span><span class="w"> </span><span class="p">]</span><span class="o">⇒</span><span class="w"> </span><span class="no">st'</span><span class="w">
 </span><span class="p">..</span><span class="pi">.</span><span class="w">
   </span><span class="no">where</span><span class="w"> </span><span class="s2">"st =[ c ]⇒ st'"</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="p">(</span><span class="no">ceval</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">st'</span><span class="p">)</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>By definition evaluation as relation (<em>in <code class="language-plaintext highlighter-rouge">Type</code> level</em>), 
 we need to construct <em>proofs</em> (<em>terms</em>) to define example.</p>
@@ -706,51 +1019,80 @@ we need to construct <em>proofs</em> (<em>terms</em>) to define example.</p>
 
 <p>we can prove:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">ceval_deterministic</span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">c</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">st1</span><span class="w"> </span><span class="no">st2</span><span class="p">,</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">ceval_deterministic</span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">c</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">st1</span><span class="w"> </span><span class="no">st2</span><span class="p">,</span><span class="w">
      </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="p">]</span><span class="o">⇒</span><span class="w"> </span><span class="no">st1</span><span class="w"> </span><span class="o">→</span><span class="w">
      </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="p">]</span><span class="o">⇒</span><span class="w"> </span><span class="no">st2</span><span class="w"> </span><span class="o">→</span><span class="w">
      </span><span class="no">st1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">st2</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w"> </span><span class="err">...</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="reasoning-about-imp-programs">Reasoning About Imp Programs</h2>
 
 <h3 id="case-plus2_spec">Case <code class="language-plaintext highlighter-rouge">plus2_spec</code></h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">plus2_spec</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">st</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">st'</span><span class="p">,</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">plus2_spec</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">∀</span><span class="no">st</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">st'</span><span class="p">,</span><span class="w">
   </span><span class="no">st</span><span class="w"> </span><span class="no">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">→</span><span class="w">
   </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">plus2</span><span class="w"> </span><span class="p">]</span><span class="o">⇒</span><span class="w"> </span><span class="no">st'</span><span class="w"> </span><span class="o">→</span><span class="w">
   </span><span class="no">st'</span><span class="w"> </span><span class="no">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
   </span><span class="kp">intros</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="no">st'</span><span class="w"> </span><span class="no">HX</span><span class="w"> </span><span class="no">Heval</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>this looks much better as inference rules:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    H(x) = n
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>    H(x) = n
     H; x := x + 2 ⇓ H'
   --------------------- (plus2_spec)
     H'(x) = n + 2
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>By <code class="language-plaintext highlighter-rouge">inversion</code> on the Big Step eval relation, we can <em>expand</em> one step of <code class="language-plaintext highlighter-rouge">ceval</code>
 (对 derivation tree 的 expanding 过程其实就是展开我们所需的计算步骤的过程)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  st : string -&gt; nat
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>  st : string -&gt; nat
   =================================
   (X !-&gt; st X + 2; st) X = st X + 2
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>In inference rule:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  H : string → nat
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>  H : string → nat
   ================================
   (x ↦ H(x) + 2); H)(x) = H(x) + 2
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="case-no_whiles_terminating">Case <code class="language-plaintext highlighter-rouge">no_whiles_terminating</code></h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">no_whilesR_terminating_fail</span><span class="p">:</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">no_whilesR_terminating_fail</span><span class="p">:</span><span class="w">
    </span><span class="kr">forall</span><span class="w"> </span><span class="no">c</span><span class="p">,</span><span class="w"> </span><span class="no">no_whilesR</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">forall</span><span class="w"> </span><span class="no">st</span><span class="p">,</span><span class="w"> </span><span class="kp">exists</span><span class="w"> </span><span class="no">st'</span><span class="p">,</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="p">]=&gt;</span><span class="w"> </span><span class="no">st'</span><span class="pi">.</span><span class="w">
 </span><span class="k">Proof</span><span class="pi">.</span><span class="w">
   </span><span class="kp">intros</span><span class="pi">.</span><span class="w">
@@ -758,27 +1100,37 @@ we need to construct <em>proofs</em> (<em>terms</em>) to define example.</p>
   </span><span class="o">-</span><span class="w"> </span><span class="no">admit</span><span class="pi">.</span><span class="w">
   </span><span class="p">-</span><span class="w"> </span><span class="no">admit</span><span class="pi">.</span><span class="w">
   </span><span class="p">-</span><span class="w"> </span><span class="c">(* E_Seq *)</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>If we <code class="language-plaintext highlighter-rouge">intros st</code> before <code class="language-plaintext highlighter-rouge">induction c</code>, 
 the IH would be <em>for particular <code class="language-plaintext highlighter-rouge">st</code></em> and too specific for <code class="language-plaintext highlighter-rouge">E_Seq</code> 
 (It’s actually okay for <code class="language-plaintext highlighter-rouge">TEST</code> since both branch derive from the same <code class="language-plaintext highlighter-rouge">st</code>)</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">IHno_whilesR1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kp">exists</span><span class="w"> </span><span class="no">st'</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">,</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">c1</span><span class="w"> </span><span class="p">]=&gt;</span><span class="w"> </span><span class="no">st'</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="no">IHno_whilesR1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kp">exists</span><span class="w"> </span><span class="no">st'</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">,</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">c1</span><span class="w"> </span><span class="p">]=&gt;</span><span class="w"> </span><span class="no">st'</span><span class="w">
 </span><span class="no">IHno_whilesR2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kp">exists</span><span class="w"> </span><span class="no">st'</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">,</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="p">]=&gt;</span><span class="w"> </span><span class="no">st'</span><span class="w">
 </span><span class="o">============================</span><span class="w">
 </span><span class="kp">exists</span><span class="w"> </span><span class="no">st'</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">,</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="no">c1</span><span class="p">;;</span><span class="w"> </span><span class="no">c2</span><span class="w"> </span><span class="p">]=&gt;</span><span class="w"> </span><span class="no">st'</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>So we’d love to</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kp">generalize</span><span class="w"> </span><span class="kp">dependent</span><span class="w"> </span><span class="no">st</span><span class="pi">.</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kp">generalize</span><span class="w"> </span><span class="kp">dependent</span><span class="w"> </span><span class="no">st</span><span class="pi">.</span><span class="w">
 </span><span class="kp">induction</span><span class="w"> </span><span class="no">H</span><span class="p">..</span><span class="pi">.</span><span class="w">
 </span><span class="err">-</span><span class="w"> </span><span class="kp">specialize</span><span class="w"> </span><span class="p">(</span><span class="no">IHno_whilesR1</span><span class="w"> </span><span class="no">st</span><span class="p">)</span><span class="pi">.</span><span class="w">  </span><span class="kp">destruct</span><span class="w"> </span><span class="no">IHno_whilesR1</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="p">[</span><span class="no">st'</span><span class="w"> </span><span class="no">Hc1</span><span class="p">]</span><span class="pi">.</span><span class="w">
   </span><span class="kp">specialize</span><span class="w"> </span><span class="p">(</span><span class="no">IHno_whilesR2</span><span class="w"> </span><span class="no">st'</span><span class="p">)</span><span class="pi">.</span><span class="w"> </span><span class="kp">destruct</span><span class="w"> </span><span class="no">IHno_whilesR2</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="p">[</span><span class="no">st''</span><span class="w"> </span><span class="no">Hc2</span><span class="p">]</span><span class="pi">.</span><span class="w">  </span><span class="c">(* specialize [IH2] with the existential of [IH1] **)</span><span class="w">
   </span><span class="kp">exists</span><span class="w"> </span><span class="no">st''</span><span class="pi">.</span><span class="w">
   </span><span class="kp">apply</span><span class="w"> </span><span class="no">E_Seq</span><span class="w"> </span><span class="kp">with</span><span class="w"> </span><span class="p">(</span><span class="no">st'</span><span class="p">);</span><span class="w"> </span><span class="ne">assumption</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="additional-exerciese">Additional Exerciese</h2>
 
@@ -793,7 +1145,24 @@ the IH would be <em>for particular <code class="language-plaintext highlighter-r
   </ul>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>infix:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre>infix:
       (2*3)+(3*(4-2))
 
 postfix:
@@ -810,40 +1179,53 @@ stack:
       [2, 3, 6]     |    * +
       [6, 6]        |    +
       [12]          |
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <blockquote>
   <p>Goal: compiler translates <code class="language-plaintext highlighter-rouge">aexp</code> into stack machine instructions.</p>
 </blockquote>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">sinstr</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">sinstr</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">SPush</span><span class="w"> </span><span class="p">(</span><span class="no">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">SLoad</span><span class="w"> </span><span class="p">(</span><span class="no">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">string</span><span class="p">)</span><span class="w">   </span><span class="c">(* load from store (heap) *)</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">SPlus</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">SMinus</span><span class="w">
 </span><span class="p">|</span><span class="w"> </span><span class="no">SMult</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="correct-proof">Correct Proof</h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">s_compile_correct</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">forall</span><span class="w"> </span><span class="p">(</span><span class="no">st</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">e</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">),</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">s_compile_correct</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">forall</span><span class="w"> </span><span class="p">(</span><span class="no">st</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">e</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">),</span><span class="w">
   </span><span class="no">s_execute</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">(</span><span class="no">s_compile</span><span class="w"> </span><span class="no">e</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="no">aeval</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">e</span><span class="w"> </span><span class="p">]</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>To prove this, we need a <em>stronger</em> induction hypothesis (i.e. more general), so we state:</p>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Theorem</span><span class="w"> </span><span class="no">s_execute_theorem</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">forall</span><span class="w"> </span><span class="p">(</span><span class="no">st</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">e</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">stack</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">prog</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">sinstr</span><span class="p">),</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">Theorem</span><span class="w"> </span><span class="no">s_execute_theorem</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">forall</span><span class="w"> </span><span class="p">(</span><span class="no">st</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">state</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">e</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">aexp</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">stack</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">nat</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="no">prog</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">sinstr</span><span class="p">),</span><span class="w">
   </span><span class="no">s_execute</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">stack</span><span class="w"> </span><span class="p">(</span><span class="no">s_compile</span><span class="w"> </span><span class="no">e</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="no">prog</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">s_execute</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="p">((</span><span class="no">aeval</span><span class="w"> </span><span class="no">st</span><span class="w"> </span><span class="no">e</span><span class="p">)</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="no">stack</span><span class="p">)</span><span class="w"> </span><span class="no">prog</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>and go through!</p>
 
 <h3 id="imp-breakcontinue">IMP <code class="language-plaintext highlighter-rouge">Break/Continue</code></h3>
 
-<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">result</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+<div class="language-coq highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">Inductive</span><span class="w"> </span><span class="no">result</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">SContinue</span><span class="w">
   </span><span class="p">|</span><span class="w"> </span><span class="no">SBreak</span><span class="pi">.</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>The idea is that we can add a <em>signal</em> to notify the loop!</p>
 
@@ -882,71 +1264,56 @@ stack:
 </ol>
 
 
-                <hr>
-
-                
-                <!-- 多说 Share start -->
-                </style>
-                <div class="ds-share" style="text-align: right" data-thread-key="/2019/01/12/sf-lf-12-imp"
-                    data-title="「SF-LC」12 Imp" data-url="http://localhost:4000/huxblog-boilerplate/2019/01/12/sf-lf-12-imp/"
-                    data-images="http://localhost:4000/huxblog-boilerplate/img/home-bg.jpg"
-                    data-content="Z ::= X;;
-Y ::= 1;;
-WHILE ~(Z = 0) DO
-  Y ::= Y * Z;;
-  Z ::= Z - 1
-END
-
-
-A w... | 你的博客 | Your Blog ">
-                    <div class="ds-share-inline">
-                        <ul class="ds-share-icons-16">
-                            <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                            <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                            <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                            <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                        </ul>
-                        <div class="ds-share-icons-more">
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <!-- 多说 Share end-->
-                
-
-
+                <hr style="visibility: hidden;">
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/huxblog-boilerplate/2019/01/11/sf-lf-11-rel/"
-                            data-toggle="tooltip" data-placement="top" title="「SF-LC」11 Rel">&larr; Previous
-                            Post</a>
+                        <a href="/2019/01/11/sf-lf-11-rel/" data-toggle="tooltip" data-placement="top" title="「SF-LC」11 Rel">
+                        Previous<br>
+                        <span>「SF-LC」11 Rel</span>
+                        </a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/huxblog-boilerplate/2019/01/13/sf-lf-13-imp-parser/" data-toggle="tooltip"
-                            data-placement="top" title="「SF-LC」13 ImpParser">Next Post &rarr;</a>
+                        <a href="/2019/01/13/sf-lf-13-imp-parser/" data-toggle="tooltip" data-placement="top" title="「SF-LC」13 ImpParser">
+                        Next<br>
+                        <span>「SF-LC」13 ImpParser</span>
+                        </a>
                     </li>
                     
                 </ul>
-
+                <hr style="visibility: hidden;">
 
                 
-                <!-- 多说评论框 start -->
+                <!-- disqus 评论框 start -->
                 <div class="comment">
-                    <div class="ds-thread" data-thread-key="/2019/01/12/sf-lf-12-imp" data-title="「SF-LC」12 Imp"
-                        data-url="http://localhost:4000/huxblog-boilerplate/2019/01/12/sf-lf-12-imp/">
-                    </div>
+                    <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
-                <!-- 多说评论框 end -->
+                <!-- disqus 评论框 end -->
                 
 
                 
+            </div>  
 
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
             </div>
+        
 
-            <!-- Sidebar Container -->
+    <!-- Sidebar Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
@@ -954,344 +1321,195 @@ A w... | 你的博客 | Your Blog ">
 
                 <!-- Featured Tags -->
                 
-                <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#知乎" title="知乎" rel="14">
-                            知乎
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#产品" title="产品" rel="6">
-                            产品
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#UX/UI" title="UX/UI" rel="6">
-                            UX/UI
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#阿里" title="阿里" rel="3">
-                            阿里
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Web" title="Web" rel="20">
-                            Web
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#hUX 随想录" title="hUX 随想录" rel="2">
-                            hUX 随想录
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Meta" title="Meta" rel="3">
-                            Meta
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#前端开发" title="前端开发" rel="3">
-                            前端开发
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#JavaScript" title="JavaScript" rel="5">
-                            JavaScript
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#译" title="译" rel="2">
-                            译
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#CSS" title="CSS" rel="2">
-                            CSS
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Slides" title="Slides" rel="3">
-                            Slides
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#PWA" title="PWA" rel="8">
-                            PWA
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#微信" title="微信" rel="2">
-                            微信
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#En" title="En" rel="2">
-                            En
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#计算理论" title="计算理论" rel="2">
-                            计算理论
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#笔记" title="笔记" rel="39">
-                            笔记
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Vim" title="Vim" rel="2">
-                            Vim
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#LF (逻辑基础)" title="LF (逻辑基础)" rel="16">
-                            LF (逻辑基础)
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#SF (软件基础)" title="SF (软件基础)" rel="36">
-                            SF (软件基础)
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#Coq" title="Coq" rel="36">
-                            Coq
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#PLF (编程语言基础)" title="PLF (编程语言基础)" rel="19">
-                            PLF (编程语言基础)
-                        </a>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#基础" title="基础" rel="2">
-                            基础
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#C" title="C" rel="2">
-                            C
-                        </a>
-                        
-                        
-                        
-                        <a href="/huxblog-boilerplate/tags/#C++" title="C++" rel="2">
-                            C++
-                        </a>
-                        
-                        
-                    </div>
-                </section>
-                
+
+
+<section>
+    
+        <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        
+        
+        
+                <a data-sort="0065" 
+                    href="/archive/?tag=%E7%9F%A5%E4%B9%8E"
+                    title="知乎"
+                    rel="14">知乎</a>
+        
+                <a data-sort="0039" 
+                    href="/archive/?tag=%E7%AC%94%E8%AE%B0"
+                    title="笔记"
+                    rel="40">笔记</a>
+        
+                <a data-sort="0043" 
+                    href="/archive/?tag=Coq"
+                    title="Coq"
+                    rel="36">Coq</a>
+        
+                <a data-sort="0043" 
+                    href="/archive/?tag=SF+%28%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%29"
+                    title="SF (软件基础)"
+                    rel="36">SF (软件基础)</a>
+        
+                <a data-sort="0057" 
+                    href="/archive/?tag=Web"
+                    title="Web"
+                    rel="22">Web</a>
+        
+                <a data-sort="0060" 
+                    href="/archive/?tag=PLF+%28%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%29"
+                    title="PLF (编程语言基础)"
+                    rel="19">PLF (编程语言基础)</a>
+        
+                <a data-sort="0063" 
+                    href="/archive/?tag=LF+%28%E9%80%BB%E8%BE%91%E5%9F%BA%E7%A1%80%29"
+                    title="LF (逻辑基础)"
+                    rel="16">LF (逻辑基础)</a>
+        
+                <a data-sort="0071" 
+                    href="/archive/?tag=PWA"
+                    title="PWA"
+                    rel="8">PWA</a>
+        
+                <a data-sort="0073" 
+                    href="/archive/?tag=%E4%BA%A7%E5%93%81"
+                    title="产品"
+                    rel="6">产品</a>
+        
+                <a data-sort="0073" 
+                    href="/archive/?tag=UX%2FUI"
+                    title="UX/UI"
+                    rel="6">UX/UI</a>
+        
+                <a data-sort="0075" 
+                    href="/archive/?tag=JavaScript"
+                    title="JavaScript"
+                    rel="4">JavaScript</a>
+        
+                <a data-sort="0075" 
+                    href="/archive/?tag=Meta"
+                    title="Meta"
+                    rel="4">Meta</a>
+        
+                <a data-sort="0075" 
+                    href="/archive/?tag=Slides"
+                    title="Slides"
+                    rel="4">Slides</a>
+        
+                <a data-sort="0076" 
+                    href="/archive/?tag=%E8%AF%91"
+                    title="译"
+                    rel="3">译</a>
+        
+                <a data-sort="0076" 
+                    href="/archive/?tag=%E9%98%BF%E9%87%8C"
+                    title="阿里"
+                    rel="3">阿里</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=%E5%9F%BA%E7%A1%80"
+                    title="基础"
+                    rel="2">基础</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=%E5%BE%AE%E4%BF%A1"
+                    title="微信"
+                    rel="2">微信</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA"
+                    title="计算理论"
+                    rel="2">计算理论</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=C"
+                    title="C"
+                    rel="2">C</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=C%2B%2B"
+                    title="C++"
+                    rel="2">C++</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=CSS"
+                    title="CSS"
+                    rel="2">CSS</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=En"
+                    title="En"
+                    rel="2">En</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=Vim"
+                    title="Vim"
+                    rel="2">Vim</a>
+        
+                <a data-sort="0077" 
+                    href="/archive/?tag=hUX+%E9%9A%8F%E6%83%B3%E5%BD%95"
+                    title="hUX 随想录"
+                    rel="2">hUX 随想录</a>
+    </div>
+</section>
+
 
                 <!-- Friends Blog -->
                 
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    
-                    <li><a href="http://huangxuan.me">Hux Blog</a></li>
-                    
-                    <li><a href="#">Foo</a></li>
-                    
-                    <li><a href="#">Bar</a></li>
-                    
-                    <li><a href="#">Example Friends</a></li>
-                    
-                    <li><a href="#">It helps SEO</a></li>
-                    
-                </ul>
-                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="http://mida.re/">乱序（Midare）</a></li>
+  
+  <li><a href="https://ebnbin.dev/">Ebn Zhang</a></li>
+  
+  <li><a href="http://kunq.me">Kun Qian</a></li>
+  
+  <li><a href="https://sherrywoo.me/">Sherry Woo</a></li>
+  
+  <li><a href="http://blog.smdcn.net">SmdCn</a></li>
+  
+  <li><a href="http://tiye.me/">JiyinYiyong</a></li>
+  
+  <li><a href="http://dhong.co">DHong Say</a></li>
+  
+  <li><a href="http://ingf.github.io/">尹峰以为</a></li>
+  
+</ul>
+
             </div>
         </div>
     </div>
 </article>
 
+<!-- add support for mathjax by voleking-->
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
-    // dynamic User by Hux
-    var _user = 'huxblog';
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "hux";
+    var disqus_identifier = "/2019/01/12/sf-lf-12-imp";
+    var disqus_url = "http://localhost:4000/2019/01/12/sf-lf-12-imp/";
 
-    // duoshuo comment query.
-    var duoshuoQuery = { short_name: _user };
-    (function () {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript'; ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- 多说公共JS代码 end -->
+<!-- disqus 公共JS代码 end -->
 
 
-
-
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-        var d = document, t = 'script',
-            o = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        o.src = u;
-        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-        s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-        anchors.options = {
-            visible: 'always',
-            placement: 'right',
-            icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link {
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top: -0.1em;
-        }
-    }
-</style>
-
-
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
-                    
-
-                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
-                    
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a target="_blank" href="http://weibo.com/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-
-
-                    
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://github.com/huxpro">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; Your Blog 2023
-                    <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
-                    </iframe>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/huxblog-boilerplate/js/jquery.min.js "></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/huxblog-boilerplate/js/bootstrap.min.js "></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/huxblog-boilerplate/js/hux-blog.min.js "></script>
 
 
 <!-- async load function -->
@@ -1305,15 +1523,142 @@ A w... | 你的博客 | Your Blog ">
       s.parentNode.insertBefore(o, s);
     }
 </script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'right',
+          // icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  <li>
+    <a href="https://twitter.com/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="http://weibo.com/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/huxpro">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Hux Blog 2023
+                    <br>
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Simple Jekyll Search -->
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
      so Huxblog drops it officially.
 
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
 -->
 <!--
     <script>
@@ -1325,25 +1670,16 @@ A w... | 你的博客 | Your Blog ">
 -->
 
 
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
+
+
+
+
 
 <!--fastClick.js -->
 <script>
-    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -1356,10 +1692,12 @@ A w... | 你的博客 | Your Blog ">
     var _gaDomain = 'huangxuan.me';
 
     // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', _gaId, _gaDomain);
     ga('send', 'pageview');
@@ -1369,21 +1707,130 @@ A w... | 你的博客 | Your Blog ">
 
 <!-- Baidu Tongji -->
 
-<script>
-    // dynamic User by Hux
-    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
 
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        // interop with multilangual 
+        if ('' == 'true') {
+            _containerSelector = 'div.post-container.active'
+        } else {
+            _containerSelector = 'div.post-container'
+        }
+
+        // init
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        // clean
+        $(selector).html('')
+
+        // appending
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
 </script>
 
 
+
+<!-- Multi-Lingual -->
+
+
+<!-- Simple Jekyll Search -->
+<script>
+    // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
+    function htmlDecode(input) {
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/search.json',
+        searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
+        noResultsText: 'No results',
+        limit: 50,
+        fuzzy: false,
+        // a hack to get escaped subtitle unescaped. for some reason, 
+        // post.subtitle w/o escape filter nuke entire search.
+        templateMiddleware: function (prop, value, template) {
+            if (prop === 'subtitle' || prop === 'title') {
+                if (value.indexOf("code")) {
+                    return htmlDecode(value);
+                } else {
+                    return value;
+                }
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        var $searchPage = $('.search-page');
+        var $searchOpen = $('.search-icon');
+        var $searchClose = $('.search-icon-close');
+        var $searchInput = $('#search-input');
+        var $body = $('body');
+
+        $searchOpen.on('click', function (e) {
+            e.preventDefault();
+            $searchPage.toggleClass('search-active');
+            var prevClasses = $body.attr('class') || '';
+            setTimeout(function () {
+                $body.addClass('no-scroll');
+            }, 400)
+
+            if ($searchPage.hasClass('search-active')) {
+                $searchClose.on('click', function (e) {
+                    e.preventDefault();
+                    $searchPage.removeClass('search-active');
+                    $body.attr('class', prevClasses);  // from closure 
+                });
+                $searchInput.focus();
+            }
+        });
+    });
+</script>
 
 
 <!-- Image to hack wechat -->
