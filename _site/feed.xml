@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hux Blog</title>
-    <description>这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员</description>
+    <title>RioChen Blog</title>
+    <description>Nothing is impossible for a willing heart.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 04 May 2023 21:04:43 +0800</pubDate>
-    <lastBuildDate>Thu, 04 May 2023 21:04:43 +0800</lastBuildDate>
+    <pubDate>Thu, 04 May 2023 21:36:31 +0800</pubDate>
+    <lastBuildDate>Thu, 04 May 2023 21:36:31 +0800</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>RioChen Test</title>
+        <description>&lt;h1 id=&quot;笔面试记录&quot;&gt;笔面试记录&lt;/h1&gt;
+
+&lt;h2 id=&quot;326-周日-小红书笔试&quot;&gt;3.26 周日 小红书笔试&lt;/h2&gt;
+
+&lt;p&gt;选择题和算法题两个部分，选择题20道，算法题3道。选择题没什么特别的，记录一下算法题：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leetcode.cn/circle/article/fDSyHY/&quot;&gt;相关链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 04 May 2023 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/05/04/%E7%AC%94%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/05/04/%E7%AC%94%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/</guid>
+        
+        <category>Meta</category>
+        
+        
+      </item>
     
       <item>
         <title>《JavaScript 二十年》推荐语</title>
@@ -2521,25 +2542,6 @@ When this happens, it is unpredictable which instance will be found first by the
         <category>SF (软件基础)</category>
         
         <category>QC (Quickcheck)</category>
-        
-        <category>Coq</category>
-        
-        <category>笔记</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>「SF-PLF」19 PE</title>
-        <description>&lt;p&gt;TBD&lt;/p&gt;
-</description>
-        <pubDate>Tue, 19 Mar 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/03/19/sf-plf-19-partial-eval/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/03/19/sf-plf-19-partial-eval/</guid>
-        
-        <category>SF (软件基础)</category>
-        
-        <category>PLF (编程语言基础)</category>
         
         <category>Coq</category>
         
